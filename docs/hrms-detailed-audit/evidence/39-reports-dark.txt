@@ -1,0 +1,26 @@
+- banner:
+  - button:
+  - heading "Reports" [level=1]
+  - button "Punch In":
+    - text: Punch In
+  - button "Switch to light mode":
+  - button:
+- main:
+  - heading "Reports & Analytics" [level=1]
+  - paragraph: Analyze your leave usage patterns and trends
+  - button "Export Report" [disabled]:
+    - generic: Export Report
+  - generic: "0"
+  - generic: Total Requests
+  - generic: "0"
+  - generic: Approved
+  - generic: "0"
+  - generic: Pending
+  - generic: "0"
+  - generic: Rejected
+  - generic: No leave data yet. Apply for leave to see your analytics.
+  - heading "Leave Balance Overview" [level=3]
+  - generic: Paid
+  - text: 2 / 2 days remaining
+  - generic: (1/month, carries forward)
+- region "Notifications alt+T"

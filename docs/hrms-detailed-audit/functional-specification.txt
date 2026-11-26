@@ -1,0 +1,974 @@
+HRMS EMPLOYEE PORTAL — DETAILED FUNCTIONAL RECORD
+Final-access discovery record · 25 November 2026
+Source portal: https://mobiyantraworkportal.co.in
+
+[01] Purpose, scope and how to read this record
+
+This document records the accessible portal's FEATURES AND BEHAVIOR. It is not
+a request to copy its visual design. The replacement will have its own design
+and must work on mobile, tablet and desktop.
+
+The user has supplied all available access. HR/Admin access is unavailable and
+is deferred until after the employee-facing system is built. This record must
+remain useful without returning to the current portal. No further portal access
+is assumed by the proposed coverage or by the unresolved-items register.
+
+Evidence labels used throughout:
+OBSERVED: screen, control, input attribute, state or interaction seen directly.
+CONFIRMED: behavior explicitly stated by the user.
+GUIDE: behavior described in the portal's built-in How It Works page; not proven
+by completing a live transaction.
+UNVERIFIED: exact behavior is not exposed by the accessible data or safe review.
+REQUIREMENT: user requirement for the replacement rather than a proven property
+of the current application.
+
+The screenshots are evidence, not the design specification. The text snapshots
+preserve screen content; JSON snapshots preserve rendered control attributes,
+dropdown values and viewport measurements. Attributes such as required, min,
+max, accept and disabled are browser/UI evidence, not proof of server validation.
+DOM snapshots can include underlying navigation or background content while a
+dialog is open. This does not mean the background is interactable in that state.
+
+Example balances, dates, counts, employee names and statuses reflect this review
+session. They must not become hardcoded values in the replacement. The evidence
+contains live account/company information; the functional text avoids repeating
+private employee contact details unnecessarily.
+
+Draft form values were entered for inspection and reset or discarded. No leave,
+cancellation, registration, password reset email, correction, profile save, photo
+upload, asset change, payroll operation or attendance punch was submitted.
+A notification item was clicked to inspect its behavior; no navigation or clear
+visual state change was established. Read/unread persistence remains unverified.
+
+Evidence: screenshots/ and evidence/ in this package; initial-reference/ contains
+the first walkthrough and explicit 390px, 768px and 1440px reference captures.
+This detailed record supersedes the initial checklist where they differ.
+
+[02] Routes, navigation and shared application behavior
+
+SHELL-01 | OBSERVED | The signed-in area presents the following navigation order:
+Dashboard (/dashboard), Apply Leave (/apply-leave), My Requests (/my-requests),
+Leave Balance (/balance), Payslips (/payslips), Attendance (/attendance), Team
+Calendar (/calendar), Employees (/employees), Holidays (/holidays), My Assets
+(/my-assets), Reports (/reports), How It Works (/how-it-works).
+
+SHELL-02 | OBSERVED | My Profile is reached through the account menu and opens
+/profile. Authentication and the login/sign-up/recovery views use /auth.
+
+SHELL-03 | OBSERVED | Desktop has persistent navigation. A narrow viewport has a
+menu button that opens a navigation drawer with the same destinations, account
+identity, logo and Close button. The account summary includes avatar, full name
+and email. The account dropdown contains My Profile and Logout.
+
+SHELL-04 | OBSERVED | Escape dismisses the account dropdown and then the drawer.
+The close button is also available. Route navigation was exercised throughout;
+the drawer sometimes remained open while a route changed and required closing.
+Do not assume that every navigation action auto-closes it.
+
+SHELL-05 | OBSERVED | The shared header exposes a page title, Punch In shortcut,
+theme toggle and notification bell. The wide header also shows the description
+Leave Management System. The title on /profile remained Dashboard even though
+the page content was My Profile; this is recorded as an existing inconsistency,
+not a required behavior.
+
+SHELL-06 | OBSERVED | Initial/full-page navigation can show a branded MOBIYANTRA
+splash and per-page loading content. Observed loading messages include Loading
+dashboard..., Loading your requests..., Loading leave balance..., Loading
+attendance..., Loading team calendar..., Loading employees... and Loading your
+assets.... Loaded content replaces those states.
+
+SHELL-07 | OBSERVED | Initial sign-in showed a dismissible first-day welcome
+message with the user's first name and company. It stated that it would disappear
+in 30 seconds and provided an X. The eligibility rule for showing this message
+again, whether it depends on join date, and dismissal persistence were not tested.
+
+SHELL-08 | OBSERVED | The UI exposes a Notifications alt+T region used for transient
+notifications/toasts. This region is distinct from the bell's notification history.
+The keyboard hint was visible in accessibility output; its actual shortcut was
+not exercised. Success/error toast wording for real submissions is unverified.
+
+SHELL-09 | UNVERIFIED | Session timeout, session refresh, simultaneous sessions,
+logout behavior, unauthorized-route handling, deep-link restoration, offline
+handling and browser-back behavior during edited forms were not established.
+No access-control rule should be inferred from a menu item alone.
+
+Evidence: 01, 03, 42, 43, 44, 47; initial-reference/04-navigation.jpg.
+
+[03] Light and dark mode
+
+THEME-01 | OBSERVED | The header provides a reversible theme switch. In light mode
+its accessible title is Switch to dark mode; after activation it becomes Switch
+to light mode. The icon changes between moon and sun.
+
+THEME-02 | OBSERVED | Toggling changes the portal's rendered backgrounds, cards,
+text and header treatment. Dark mode was seen on dashboard, forms, lists and
+attendance; it is a functional portal preference, not just a decorative icon.
+
+THEME-03 | OBSERVED | Dark mode remained active after reloading the dashboard.
+It also appeared on several subsequent module visits. The exact persistence
+mechanism and lifetime were not inspected.
+
+THEME-04 | OBSERVED | Authentication screens were light when opened separately
+while the employee portal had been dark. Later captures returned to light mode.
+No cause was established. Capture filenames containing dark describe the intended
+capture sequence, not proof of the actual theme; inspect each screenshot and
+the toggle title in its snapshot. The guide capture 41 was light.
+
+THEME-05 | UNVERIFIED | Automatic system-theme detection, preference sharing
+across browsers/devices, first-visit default, auth-theme consistency and behavior
+after clearing browser data were not proven. The portal was left in light mode.
+
+Evidence: 01 versus 02, 03 after reload, 44 desktop dark, 47 final light.
+
+[04] Login
+
+AUTH-01 | OBSERVED | /auth presents Login and Sign Up tabs, with Login selected
+initially. The screen carries a company logo, the portal name and Leave
+Management System subtitle. Changing tabs does not require a different route.
+
+AUTH-02 | OBSERVED | Login has Email and Password fields, Forgot password? and a
+Login button. Email is type=email with placeholder your@email.com. Password is
+type=password with a masked-dot placeholder. Password text is concealed.
+
+AUTH-03 | OBSERVED | Neither login input exposed a native required attribute,
+minlength, maxlength or pattern in the captured markup. This only describes the
+rendered inputs; custom validation and server validation may still exist.
+
+AUTH-04 | OBSERVED | A real sign-in was completed by the user and reached the
+employee Dashboard. Credentials were not recorded in this documentation.
+
+AUTH-05 | UNVERIFIED | Invalid credentials, empty submission, blocked accounts,
+rate limits, login loading state, error wording, email normalization, redirects
+after login, password visibility controls and any MFA/email verification steps
+were not exercised. No SSO, remember-me or password-eye control was visible in
+the captured login view; this is not proof that no other auth flow exists.
+
+Evidence: 28, initial-reference/01-login-desktop.jpg.
+
+[05] Forgot-password flow
+
+RECOVERY-01 | OBSERVED | Forgot password? replaces the tab content with a Forgot
+Password? view on /auth. It explains: Enter your registered email and we'll send
+you a reset link.
+
+RECOVERY-02 | OBSERVED | The view has Back to Login, Email Address and Send Reset
+Link. Email is type=email, required=true and placeholder your@email.com. Send
+Reset Link is a submit button. Back to Login returns to the login tab view.
+
+RECOVERY-03 | UNVERIFIED | No reset link was sent. Success wording, account-not-found
+handling, resend cooldown, reset-email content, link expiry, one-time use, the
+new-password screen, confirmation and post-reset session handling are unknown.
+
+Evidence: 29-forgot-password, 28 after returning to Login.
+
+[06] Sign-up — fields and choices
+
+REG-01 | OBSERVED | Sign Up is an alternate tab on /auth. The visible field order
+is Full Name, Email, Date of Birth, Join Date, Company, Department, Designation,
+Phone Number, Gender *, Role, Password and Confirm Password, then Sign Up.
+
+REG-02 | OBSERVED | Full Name: text input, John Doe placeholder, required=true.
+Email: type=email, your@email.com placeholder, required=true. Neither input
+exposed maxlength, minlength or pattern in the captured markup.
+
+REG-03 | OBSERVED | Date of Birth: native date input, required=true, max=2026-11-25
+in this review session. That is the review date, indicating no future DOB is
+allowed by the current input constraint. No minimum DOB was exposed.
+
+REG-04 | OBSERVED | Join Date: native date input with no required, min or max
+attribute in the captured markup. Do not assume this proves server optionality.
+
+REG-05 | OBSERVED | Company: custom select with Select company placeholder and
+four choices: Wazirz Sm India Private Limited; Mobiyantra Private Limited;
+Riddlepay Private Limited; Finastraa Technologies Private Limited.
+
+REG-06 | OBSERVED | Department: Select department placeholder. Choices: Accounts,
+IT, Director, Office Boy, Management. The directory's filter contains only its
+four populated departments and does not include Director in this account's list.
+
+REG-07 | OBSERVED | Designation: Select designation placeholder. Choices:
+Accountant; Senior Accountant; Software Developer; Software Developer Intern;
+Accounts Intern; Office Boy; Director; Receptionist; Admin Executive; Web Designer.
+After selecting Mobiyantra Private Limited and IT, the designation menu still
+offered this full list. Department-based filtering was not demonstrated.
+
+REG-08 | OBSERVED | Phone Number: type=tel, placeholder 10-digit mobile number,
+required=true. No native pattern, minlength or maxlength was exposed. The
+placeholder expresses intended format; it does not prove digits-only or exact
+length enforcement.
+
+REG-09 | OBSERVED | Gender is visually marked with an asterisk and starts at
+Select gender. Choices: Male, Female, Other. The companion native select did
+not expose required=true, so actual custom validation is not established.
+
+REG-10 | OBSERVED | Role defaults to Employee. Opening the menu showed Employee
+as its only choice. There is no evidence of public HR/Admin self-registration
+from this form. This corrects the initial walkthrough's unverified role concern.
+
+REG-11 | OBSERVED | Password and Confirm Password are masked password inputs,
+both required=true. No native minlength, maxlength or pattern was exposed.
+Password strength, matching validation and error messages remain untested.
+
+REG-12 | OBSERVED | Company/department/designation/gender menus expose options
+through listbox/option semantics; choices can be selected and returned to the
+form. The values and displayed labels are preserved in JSON evidence.
+
+REG-13 | UNVERIFIED | Requiredness of custom company/department/designation
+controls, duplicate-email handling, phone validation, password requirements,
+sign-up loading/success/error states, account approval, invitations, terms,
+verification email, default permissions and automatic login are not proven.
+No account was created.
+
+Evidence: 30–35; full field attributes in evidence/30-signup-detailed.json.
+
+[07] Dashboard
+
+DASH-01 | OBSERVED | Dashboard has the current weekday/day/month, a greeting
+using the user's first name and a contextual salutation (Good Night observed),
+plus Here's your leave overview for today. The salutation schedule is unknown.
+
+DASH-02 | OBSERVED | A monthly paid-leave usage indicator displays used/quota
+(0/1 in this account) with Used This Month and Paid Leave quota labels.
+
+DASH-03 | OBSERVED | Summary cards are Monthly Quota (Paid Leave), Used This
+Month (Approved this month), Approved (Leave requests), Pending (Awaiting
+approval). They are distinct measures; pending requests are not shown as used.
+The snapshot alone does not establish all count/query rules.
+
+DASH-04 | OBSERVED | Leave Balance shows Paid Leave days available and Permission
+Leave as Unlimited. Permission leave is described as available anytime, without
+quota deduction, but unpaid. Apply for Leave navigates to /apply-leave.
+
+DASH-05 | OBSERVED | Recent Leave Requests has View all -> /my-requests. With no
+requests, it shows No leave requests yet and Apply for your first leave ->
+/apply-leave. A populated recent-request card was not available.
+
+DASH-06 | UNVERIFIED | Number of recent items, default request sorting, request
+detail navigation and whether metrics update without a reload are unknown.
+The guide claims live balance/calendar updates; that is recorded separately.
+
+Evidence: 01–03, 44, 47; initial-reference/20-dashboard-1440.jpg,
+23-dashboard-390.jpg and 24-dashboard-768.jpg.
+
+[08] Applying for leave — form details
+
+LEAVE-01 | OBSERVED | Apply for Leave explains Submit your leave request and
+track its approval status. A balance notice shows Paid Leave availability and
+the one-day-per-month/carry-forward policy when balance data has loaded.
+
+LEAVE-02 | OBSERVED | Leave Type is a required native select. Empty placeholder:
+Select leave type. Options: Paid Leave (1/month), value paid; Permission Leave
+(Unpaid), value permission. No other selectable type appeared in this form.
+
+LEAVE-03 | OBSERVED | Selecting Paid Leave exposes a Paid Leave — 1/month quota
+card with Accrued Quota, Used and Remaining values and the carry-forward note.
+Current example: accrued 2 days, used 0, remaining 2. These are account data.
+
+LEAVE-04 | OBSERVED | Selecting Permission Leave exposes an inline explanation
+that it is unpaid, has no quota deduction and has no frequency limit. Its side
+card says No quota tracking — this leave type is unpaid and not deducted from
+any balance. It does not present the paid-leave quota card as its own quota.
+
+LEAVE-05 | OBSERVED | From Date and To Date are required native date inputs.
+Both had min=2026-11-25, the review date, and no exposed max. The captured form
+therefore prevents dates before that date through native minimum constraints.
+Whether the end-date minimum updates to the selected start date is unverified.
+
+LEAVE-06 | OBSERVED | Reason is required, uses a multiline textarea and has the
+placeholder Please provide details for your leave request.... No native length
+constraint was exposed in the captured markup.
+
+LEAVE-07 | OBSERVED | Attachment is optional. A Click to upload area advertises
+PDF, DOC, JPG or PNG with max. 5MB. The file input accept value is
+.pdf,.doc,.docx,.jpg,.jpeg,.png. Thus DOCX/JPEG variants are included in the
+actual picker constraint although the short helper text does not list them all.
+No multiple-file attribute was established by this record.
+
+LEAVE-08 | OBSERVED | Submit Request and Reset are separate buttons. Reset was
+exercised: selected type, draft dates and draft reason returned to empty/default,
+and the type-specific quota card disappeared. No file was selected in this test.
+
+LEAVE-09 | OBSERVED | Policy help says one paid day/month with carry-forward;
+Permission Leave anytime/unlimited/unpaid; weekends and company holidays do
+not count as leave days. The IT account specifically says Sat + Sun for IT.
+
+LEAVE-10 | GUIDE | The portal guide states that paid leave accrues monthly and
+carries forward indefinitely, never expires, and cannot be applied for a Monday
+or Friday. It says Permission Leave is the only leave type allowed on Monday
+or Friday. These exact restrictions were not proven by a submitted request.
+
+LEAVE-11 | UNVERIFIED | Automated draft date entries did not reliably persist
+across field changes. The screenshots named Monday draft/date range do NOT
+prove Monday rejection, a valid range, or working-day calculation. No complete
+draft range or date-specific validation error was established. Preserve this
+as an inspection limitation rather than declaring a portal date-entry bug.
+
+LEAVE-12 | UNVERIFIED | Exact working-day calculation; inclusive end date;
+zero-working-day ranges; cross-month/year treatment; paid-leave cap versus
+accrued balance; overlapping/past requests; minimum notice; partial days;
+insufficient balance; duplicate submission; pending-balance reservation;
+attachment size/type rejection, upload progress, remove/replace and download;
+network failure/retry; final submission confirmation and error copy are unknown.
+
+Evidence: 05–09, initial-reference/05-apply-leave.jpg, 21-apply-leave-1440.jpg,
+22-apply-leave-390.jpg. No live request was created.
+
+[09] Leave requests — search, filters, sorting and lifecycle
+
+REQUEST-01 | OBSERVED | My Leave Requests shows a subtitle about tracking and
+managing requests and five counters: Total, Pending, Approved, Rejected,
+Cancelled. All were zero for this account.
+
+REQUEST-02 | OBSERVED | Search is a text input with Search by reason or leave
+type... placeholder. Draft search input was accepted; there was no populated
+request data to verify search matching, case sensitivity or debounce behavior.
+
+REQUEST-03 | OBSERVED | Filters toggles an expanded filter area. Status buttons:
+All, Pending, Approved, Rejected, Cancelled. Leave Type buttons: All, Paid Leave,
+Unpaid Leave, Work From Home. Status and type can be chosen together with search.
+
+REQUEST-04 | OBSERVED | Sort dropdown: Sort by Date (default, value date) and
+Sort by Status (value status). Selecting Sort by Status changed its displayed
+selection. Ordering direction/tie-breakers could not be tested without records.
+
+REQUEST-05 | OBSERVED | The list shows Showing N of M requests. With no results,
+it displays No requests found and suggests adjusting filters/search or applying
+for a new leave. The same empty message was seen with combined search/filters.
+No clear-all control was visible in the expanded filter area examined.
+
+REQUEST-06 | GUIDE | Employee submission creates a Pending request and immediately
+alerts HR/Admin. There is a single approve/reject decision, with no multilevel
+approval chain described. Rejection can include an admin remark.
+
+REQUEST-07 | GUIDE | Approval updates balance and team calendar, and the employee
+is notified. Status guide meanings: Pending = awaiting HR/Admin; Approved =
+accepted with balance/calendar updated; Rejected = declined with a remark if
+given; Cancelled = withdrawn following approved cancellation.
+
+REQUEST-08 | GUIDE | Approved leave may be cancelled before it ends. The employee
+requests cancellation through My Requests; HR/Admin must approve it; the leave
+becomes Cancelled and balance is restored after cancellation approval.
+
+REQUEST-09 | UNVERIFIED | A populated request list/detail was unavailable. Record
+fields, status badges, request identifiers, per-record actions, attachment links,
+remarks display, pending-request withdrawal, editing, cancellation dialog/reason,
+cancellation rejection, intermediate statuses, history timestamps, pagination,
+notifications on cancellation and exact balance-reversal timing are unknown.
+
+REQUEST-10 | OBSERVED | The request filters expose Unpaid Leave and Work From
+Home, whereas the application form exposes Permission Leave and Paid Leave.
+These labels may reflect historic types, normalization or different rules; no
+equivalence should be silently assumed.
+
+Evidence: 10–11, 41 guide, initial-reference/06-my-requests.jpg and
+25-request-filters.jpg.
+
+[10] Leave balance and accrual presentation
+
+BALANCE-01 | OBSERVED | Leave Balance presents an overall percentage used, this
+month's quota, and this month's approved usage. Current values were 0% used,
+one-day monthly quota and zero approved usage.
+
+BALANCE-02 | OBSERVED | Leave Quota by Type has a paid-leave card showing the
+one-day-per-month policy, Accrued, Used, Left and This month used/quota. The
+account's example was Accrued 2, Used 0, Left 2 and This month 0/1.
+
+BALANCE-03 | OBSERVED | Month-wise Usage — 2026 is described as approved leaves
+taken each month. With no approved records it says No approved leaves taken
+this year yet. No year-selection control appeared in this view.
+
+BALANCE-04 | OBSERVED | Policy text repeats Permission Leave's unlimited unpaid
+status, no balance deduction, and weekend/company-holiday exclusion.
+
+BALANCE-05 | GUIDE | The guide claims live balance updates and restoration after
+approved cancellation. Monthly accrual start date, partial-month proration,
+eligibility/probation, manual adjustments, negative balances, year-end rules,
+retroactive corrections and whether pending leave holds balance are unverified.
+
+Evidence: 36 and initial-reference/07-leave-balance.jpg.
+
+[11] Attendance — current session, history and calculations
+
+ATTEND-01 | OBSERVED | Attendance describes Track your daily punch in / punch out.
+There is a current-date panel, session heading, Punch In time, Punch Out time,
+Total Hours This Session and a primary Punch In action. The header has another
+Punch In shortcut. No live punch action was invoked during this review.
+
+ATTEND-02 | OBSERVED | This account was in Session Complete state: current-day
+in/out times existed and a Punch In action was still available. This proves the
+control is displayed in that state; it does not prove a second session is allowed.
+
+ATTEND-03 | OBSERVED | The session panel displayed 8.59 hrs for an example whose
+history displayed 8.6h, demonstrating different display precision. The panel uses
+AM/PM time presentation; correction inputs expose native 24-hour time values.
+Calculation/rounding policy and exact underlying timestamps were not inspected.
+
+ATTEND-04 | OBSERVED | Four summaries appear: Present Days, Work From Home, Half
+Days and Avg. Hours/Day, each labelled Last 30 days. These are distinct metrics.
+
+ATTEND-05 | OBSERVED | Attendance History has Refresh and a month selector. The
+captured choices were November 2026 through December 2025, in reverse order:
+Nov, Oct, Sep, Aug, Jul, Jun, May, Apr, Mar, Feb, Jan 2026, then Dec 2025.
+This is a 12-month displayed range; how it rolls forward is unverified.
+
+ATTEND-06 | OBSERVED | History entries show weekday/day/month, attendance status,
+In, Out, Hrs and a pencil action titled Request correction. Entries were newest
+first in the observed months. Full Day was observed. Some Full Day rows had
+dashes for in, out and hours; status cannot be inferred from times alone.
+
+ATTEND-07 | OBSERVED | Month changes fetch different history and affect the
+summary metrics. November showed 18 present / 7.2h average; October showed
+20 present / 8.2h average; December 2025 showed 0 / 0h. The labels remained
+Last 30 days. This is a real labeling/data-scope ambiguity, not a rule to copy.
+
+ATTEND-08 | OBSERVED | While a selected month's data loaded, Refresh became
+disabled; previous rows could remain briefly visible. The settled empty month
+showed No attendance records yet. Today's session panel remained visible while
+historical month selection changed.
+
+ATTEND-09 | UNVERIFIED | Before-punch and active-session views, punch-out behavior,
+running timers, multiple sessions, breaks, overtime, shift assignment, lateness,
+half-day thresholds, overnight shifts, missed punch reconciliation, refresh
+completion feedback, location display in history and edit permissions are unknown.
+
+Evidence: 12–16, 45, initial-reference/09-attendance.jpg.
+
+[12] Location-based punch-in
+
+GEO-01 | CONFIRMED | The user explicitly confirms that punching in is
+location-based. This is part of required feature parity and must not be omitted
+because location controls are not visible on the idle attendance screen.
+
+GEO-02 | OBSERVED | Idle/current-completed attendance views expose Punch In but
+did not show office coordinates, a map, allowed radius, accuracy, GPS status,
+work-site selector or location-permission help in the captured visible content.
+
+GEO-03 | UNVERIFIED | It is not established whether the system merely records
+position, checks an office geofence, selects among office locations, uses browser
+GPS/IP, accepts remote work, or checks location again at punch-out. Do not equate
+the user's phrase location-based with a specific radius or algorithm.
+
+GEO-04 | UNVERIFIED | Office coordinates, radius and units; company/site-specific
+rules; accuracy threshold; location freshness; low-accuracy handling; permission
+denied/blocked/unavailable/timeout states; outside-office messaging; user-confirmation
+step; retry; stored coordinates; visibility/retention; VPN/mock-location handling;
+HTTPS requirements and mobile browser behavior were not exposed by safe review.
+
+GEO-05 | UNVERIFIED | Opening the live Punch In action might request location and
+immediately record attendance. It was therefore not used as an exploratory test.
+This is a documented inspection boundary, not evidence that any location check
+is absent. No GPS coordinates or permission grants were collected.
+
+GEO-06 | REQUIREMENT | Preserve location-based punching in the build scope.
+Before implementing its exact rules, resolve the above decisions explicitly
+from business requirements rather than inventing them from screenshots. The
+record is usable without another portal visit, but it cannot establish hidden
+configuration that was never visible to this account.
+
+[13] Attendance correction workflow
+
+CORRECT-01 | OBSERVED | Each examined attendance row has Request correction.
+It opens a Request Correction modal that states the request will be reviewed
+by the admin. The selected attendance date is displayed, not a separate date
+picker for choosing an unrelated day.
+
+CORRECT-02 | OBSERVED | Fields: Corrected Punch In, Corrected Punch Out and Reason *.
+Times use native time inputs. Existing row times are prefilled (e.g. 10:08 and
+18:43); a row with missing times opens with both empty.
+
+CORRECT-03 | OBSERVED | Reason is a required textarea with e.g. Forgot to punch
+out placeholder. No native reason length constraint or time min/max was exposed.
+The time inputs did not have native required attributes in the captured markup.
+
+CORRECT-04 | OBSERVED | Submit Request, Cancel and an X/Close control are present.
+With existing times prefilled, Submit Request was enabled even with an empty
+reason. With both times missing, it was disabled, including after a draft reason
+was entered. Exact enablement logic beyond these cases was not established.
+
+CORRECT-05 | OBSERVED | Cancel closes the modal without saving. The parent page
+has My Correction Requests; this account shows No correction requests yet.
+
+CORRECT-06 | UNVERIFIED | Whether one or both corrected times are required,
+end-before-start validation, overnight handling, allowed correction age, duplicate
+requests, approval status/details, admin remarks, cancellation, notifications,
+audit trail and effect on payroll/attendance totals are unknown. No correction
+was submitted and no status workflow was available to inspect.
+
+Evidence: 13–14, 46; initial-reference/10-attendance-correction.jpg.
+
+[14] Team calendar and day details
+
+CAL-01 | OBSERVED | Team Calendar is for viewing team availability and planning
+leave. It opens a month grid with month/year heading and previous/next arrows.
+The week begins Sunday and labels weekdays as S M T W T F S.
+
+CAL-02 | OBSERVED | Day cells can display leave indicators and an overflow count
+such as +1. November 3 showed an overflow indicator; selecting it revealed a
+detail panel listing three employees on leave, with initials/name and leave type.
+The exact number of indicators shown before overflow was not established.
+
+CAL-03 | OBSERVED | Selecting November 25 revealed its date heading and one team
+member on leave. The panel includes a close control. Selecting next month moved
+to December 2026 and removed the previous selected-day panel.
+
+CAL-04 | OBSERVED | Clicking a December day with no recorded leave did not produce
+a new visible detail panel in the examined state. Do not assume a universal
+empty-day modal/message from this single interaction.
+
+CAL-05 | OBSERVED | Leave-type legend: Paid Leave, Loss of Pay, Work From Home,
+Casual Leave, Sick Leave and Permission Leave. This exceeds the two application
+choices, so historic/display types and newly requestable types must be distinguished.
+
+CAL-06 | OBSERVED | Below/alongside the grid: On Leave Today with team-member
+count and name/type list; Upcoming Leaves with Next scheduled leaves and empty
+message No upcoming leaves; Team Statistics with Total Team Size, On Leave
+Today, Upcoming Leaves and Availability Rate.
+
+CAL-07 | OBSERVED | The review example had team size 31, one on leave and 97%
+availability. That is compatible with whole-percentage rounding of available/team,
+but the formula and eligibility scope were not proven. Today's summaries stayed
+present when the calendar moved to another month.
+
+CAL-08 | UNVERIFIED | Which request statuses feed the calendar, date-span handling,
+half-day indicators, holiday/weekend markings, team/company visibility, upcoming
+window, ordering, per-person details, event pagination and automatic refresh
+cadence are unknown. The guide says approvals update the calendar live.
+
+Evidence: 17–21. Capture 19's filename contains empty-selected-day, but its actual
+content is the POPULATED November 25 panel. The snapshot is authoritative.
+
+[15] Employee directory
+
+DIRECTORY-01 | OBSERVED | Employees shows Total, Working and Departments counts.
+The reviewed account had 31 total, 3 working and 4 departments. Counts are data,
+not fixed limits. They stayed at overall totals while filtering to Accounts.
+
+DIRECTORY-02 | OBSERVED | Search placeholder: Search by name, email, designation....
+Department selector defaults All; choices in this dataset: IT, Accounts, Office
+Boy and Management. Selecting Accounts reduced the visible list to that department.
+
+DIRECTORY-03 | OBSERVED | List items show a sequence number, avatar or initials,
+full name, designation, department, and a status such as Working, Offline or
+On Leave. Sequence numbers restart in the filtered list.
+
+DIRECTORY-04 | OBSERVED | Combining a department filter with a no-match search
+shows No employees found. Clicking one employee's name did not open a new page
+or detail panel in the tested state; do not invent an employee detail workflow.
+
+DIRECTORY-05 | UNVERIFIED | Search matching/case/debounce, email visibility,
+status-calculation rules, real-time presence interval, sorting, pagination,
+directory visibility by company/role and avatar fallback specifics are unknown.
+Working status appears related to attendance but no rule was proven.
+
+Evidence: 22–25 and initial-reference/12-employees.jpg. Capture 24's filename
+employee-details records an attempted interaction, not an opened details feature.
+
+[16] My Profile and photo controls
+
+PROFILE-01 | OBSERVED | My Profile has Manage your personal information and
+account details text, avatar, role label, designation and department summary,
+and a Personal Information section.
+
+PROFILE-02 | OBSERVED | Read-only presentation includes Full Name, Email, Phone,
+Gender, Company, Department, Designation, Date of Birth and Joined On. Dates
+are formatted as human-readable day/month-name/year values.
+
+PROFILE-03 | OBSERVED | A pencil edit control switches the information section
+to an inline form. Editable fields: Full Name, Phone Number, Department,
+Designation, Date of Birth and Gender. Existing values are prefilled.
+
+PROFILE-04 | OBSERVED | Edit placeholders: Your full name; +91 98765 43210;
+e.g. Engineering; e.g. Software Engineer. Department and Designation are free-text
+inputs here, despite being select controls at registration.
+
+PROFILE-05 | OBSERVED | Profile DOB is a date input with max=review date and no
+native required/min. Gender select: Select gender, Male, Female, Other. No native
+required/length/pattern constraints were exposed on the editable profile fields.
+
+PROFILE-06 | OBSERVED | Save Changes and Cancel are available. Cancel returns to
+the display view. Email, Company, Role and Joined On were not editable controls
+in the examined form. No save was performed.
+
+PROFILE-07 | OBSERVED | The avatar is a Change profile photo button with camera
+affordance/Change text; its file input accepts image/*. No upload was performed.
+
+PROFILE-08 | UNVERIFIED | Photo size limits, crop/preview/remove/default avatar,
+accepted MIME validation, upload progress/errors; profile save validation/errors;
+approval of employee-edited department/designation; whether identity changes
+propagate to all lists and historical records remain unverified.
+
+Evidence: 26–27, initial-reference/18-profile.jpg and 19-profile-edit.jpg.
+
+[17] Notifications — interface and observed event categories
+
+NOTIFY-01 | OBSERVED | The shared bell opens a Notifications panel anchored near
+the header. It lists a title, explanatory body and timestamp for each item. A
+bounded internal scroll region exposes older entries without scrolling the whole
+page. The bell toggles the panel closed again.
+
+NOTIFY-02 | OBSERVED | The history is displayed newest first in the examined list.
+Entries have small blue dot indicators. The meaning/read-state transition of
+those dots was not proven. Clicking a punch-out reminder did not navigate or
+produce a clear accessibility-tree change. No mark-all-read, clear-all, delete,
+notification settings or View all action was visible in the examined panel.
+
+NOTIFY-03 | OBSERVED | Punch-in reminder title: Haven't punched in yet? Body:
+Don't forget to mark your attendance for today. Examples were timestamped
+11:00 am on November 9, 10 and 11.
+
+NOTIFY-04 | OBSERVED | Punch-out reminder title: Don't forget to punch out!
+Body: It's past 6:30 PM — please punch out before you leave for the day.
+Examples were timestamped 06:30 pm on multiple dates.
+
+NOTIFY-05 | OBSERVED | Birthday alert title: It's a birthday today! with a birthday
+emoji. The body names the employee and asks colleagues to wish them. Examined
+examples were timestamped 09:00 am. This demonstrates birthday notifications,
+not a proven universal schedule or audience rule.
+
+NOTIFY-06 | OBSERVED | Holiday Tomorrow alert with calendar emoji. Example body:
+Tomorrow is Diwali — the office will be closed. Example was November 7 at
+06:00 pm for a November 8 closure. Recurrence rules were not independently tested.
+
+NOTIFY-07 | OBSERVED | New Holiday Added alert with calendar emoji. Body includes
+the holiday name, an ISO-format date and office-closed wording. The history
+contained examples for Diwali and Dussehra. Two identical Diwali-added entries
+had the same timestamp; duplicate handling must not be inferred from that data.
+
+NOTIFY-08 | OBSERVED | Displayed timestamps use abbreviated day/month and AM/PM,
+for example 25 Nov, 06:30 pm. No year appeared in those rows. Timezone and date
+rollover rules were not exposed.
+
+NOTIFY-09 | GUIDE | Leave submission alerts HR/Admin immediately by email and
+WhatsApp and leaves the employee request Pending. The employee's access does
+not expose the recipient configuration or an actual HR notification inbox.
+
+NOTIFY-10 | GUIDE | Leave approval/rejection decisions notify the employee by
+email, WhatsApp and in-app alert, while balance and calendar update. This is
+guide-described integration behavior, not independently verified delivery.
+
+NOTIFY-11 | UNVERIFIED | No evidence establishes payslip-publication, asset
+assignment, correction-decision, cancellation-decision, anniversary, payroll or
+other notification types. These must not be reported as existing features merely
+because they would be useful. Delivery channels for attendance/birthday/holiday
+alerts beyond the observed in-app list are also unverified.
+
+NOTIFY-12 | UNVERIFIED | Read/unread persistence, unread bell counts, deep links,
+push notifications, browser/OS permission prompts, polling/realtime transport,
+retention, pagination/infinite loading, preferences, quiet hours, resend/retry,
+failed delivery logs and template configuration were not exposed.
+
+Evidence: 48 full live notification tree, 49 item-click tree, screenshots 48–50,
+initial-reference/17-notifications.jpg and the guide in capture 41. Capture 04
+did not retain the open panel in its DOM snapshot; use 48 for notification text.
+
+[18] Notifications — office schedule confirmed by the user
+
+SCHEDULE-01 | CONFIRMED | Normal office hours are 10:00 AM to 6:00 PM.
+
+SCHEDULE-02 | CONFIRMED | On working days, an employee who has not punched in
+by 11:00 AM receives a notification addressed to that person. The reminder time
+is one hour after the stated office start time. It is not a notification to every
+employee or to the whole company.
+
+SCHEDULE-03 | CONFIRMED | At 6:30 PM, employees who have not punched out receive
+a notification. This is 30 minutes after the stated office end time. The user
+described it as the attendance reminder counterpart to the working-day rule.
+
+SCHEDULE-04 | UNVERIFIED | The user did not specify the office timezone, the
+exact working-day calendar source, approved-leave exemptions, whether someone
+absent all day receives a punch-out reminder, whether the check repeats, how
+multiple sessions are treated, or whether late/corrected punches suppress an
+already queued notification. No such detail should be silently invented.
+
+SCHEDULE-05 | REQUIREMENT | Preserve the confirmed targeted reminder behavior.
+The scheduler's eventual implementation must check the employee's attendance
+and working-day eligibility at the relevant trigger time. Defining timezone,
+holiday/weekend/approved-leave treatment and duplicate handling is a later
+business decision; it is not proof of the current scheduler's internals.
+
+SCHEDULE-06 | OBSERVED | Historical data has an ambiguity: the current holiday
+list marks November 9–11 as Office Closed, while the notification history contains
+11:00 AM punch-in reminders on those dates. Historical calendar/configuration
+may have differed; the screen data does not establish why. The user's explicit
+working-day reminder rule takes priority for the replacement.
+
+[19] Holidays — fields and exact reviewed dataset
+
+HOLIDAY-01 | OBSERVED | The route header says National Holidays; the content title
+is National Holiday Calendar with India Public & Gazetted Holidays subtitle.
+Holidays are grouped by month/year, with name, month/day, category and optional
+Office Closed designation. The reviewed list is for 2026.
+
+HOLIDAY-02 | OBSERVED | Categories shown are National and Festival. A listed public
+holiday does not automatically carry an Office Closed badge. Do not treat every
+displayed national/festival date as an office closure without its policy flag.
+
+Reviewed 2026 rows (as displayed by the portal, not externally verified dates):
+January 26 — Republic Day — National — Office Closed.
+March 4 — Holi — Festival — no Office Closed badge shown.
+March 21 — Id-ul-Fitr — Festival — no Office Closed badge shown.
+March 26 — Ram Navami — Festival — no Office Closed badge shown.
+March 31 — Mahavir Jayanti — Festival — no Office Closed badge shown.
+April 3 — Good Friday — Festival — no Office Closed badge shown.
+May 1 — Buddha Purnima — Festival — no Office Closed badge shown.
+May 27 — Id-ul-Zuha (Bakrid) — Festival — no Office Closed badge shown.
+June 26 — Muharram — Festival — no Office Closed badge shown.
+August 15 — Independence Day — National — Office Closed.
+August 26 — Milad-un-Nabi (Id-e-Milad) — Festival — no closure badge shown.
+September 4 — Janmashtami — Festival — no Office Closed badge shown.
+October 2 — Mahatma Gandhi's Birthday — National — Office Closed.
+October 20 — Dussehra — Festival — Office Closed.
+November 8 — Diwali — Festival — Office Closed.
+November 9 — Diwali Holiday — Festival — Office Closed.
+November 10 — Diwali Holiday — Festival — Office Closed.
+November 11 — Diwali Holiday — Festival — Office Closed.
+November 24 — Guru Nanak's Birthday — Festival — no Office Closed badge shown.
+December 25 — Christmas Day — Festival — no Office Closed badge shown.
+
+HOLIDAY-03 | OBSERVED | No holiday search, year picker, employee editing or
+filtering control appeared in this employee view. Do not invent those controls
+as existing employee functionality.
+
+HOLIDAY-04 | UNVERIFIED | Source of public-holiday data, annual updates, company
+and regional scoping, optional holidays, closures affecting balances, and editing
+permissions were not established. The guide says HR/Admin manages holidays.
+
+Evidence: 40 and initial-reference/13-holidays.jpg.
+
+[20] Payslips
+
+PAYSLIP-01 | OBSERVED | Payslips describes View and download your monthly payslips.
+The account has No payslips available yet with the explanation that payslips
+appear once generated by HR/Admin.
+
+PAYSLIP-02 | GUIDE | The Admin Portal runs payroll and generates payslips. This
+implies an employee-facing published output, not a payroll generation control
+in the employee account.
+
+PAYSLIP-03 | UNVERIFIED | Populated rows/cards, pay-month/year selectors, download
+format, preview, payslip fields, PDF layout, earning/deduction components, net
+pay, publication/revision, download authorization, taxes/contributions and
+publication notifications cannot be reconstructed from the empty state alone.
+No payroll formulas or jurisdictional rules are established by this record.
+
+Evidence: 37 and initial-reference/08-payslips.jpg.
+
+[21] My Assets
+
+ASSET-01 | OBSERVED | My Assets describes Company equipment currently assigned
+to you. The account shows No assets assigned to you yet.
+
+ASSET-02 | GUIDE | The guide gives laptop, ID card and accessories as examples of
+company assets tracked here. They are examples, not a complete asset taxonomy.
+
+ASSET-03 | UNVERIFIED | Populated asset cards, identifier/serial, assigned date,
+condition, acknowledgements, return/repair requests, attachments, assignment
+history, employee actions, permissions and notifications were not exposed.
+No assignment/return management screen was visible to this employee account.
+
+Evidence: 38 and initial-reference/14-my-assets.jpg.
+
+[22] Reports and analytics
+
+REPORT-01 | OBSERVED | Reports & Analytics describes analyzing personal leave
+usage patterns and trends. Summary measures: Total Requests, Approved, Pending,
+Rejected. A Cancelled report counter was not present in this view, although it
+exists on My Requests.
+
+REPORT-02 | OBSERVED | With no request data the page says No leave data yet.
+Apply for leave to see your analytics. Leave Balance Overview still shows the
+paid balance remaining/total and monthly carry-forward note.
+
+REPORT-03 | OBSERVED | Export Report is present and disabled when the reviewed
+account has no leave data. No export file was generated.
+
+REPORT-04 | UNVERIFIED | Populated chart types, grouping, date filters, comparison
+periods, export format/columns, status scope, rounding and chart interactions
+are not exposed. This is employee leave reporting, not evidence of access to
+company-wide payroll/attendance reports.
+
+Evidence: 39 and initial-reference/15-reports.jpg.
+
+[23] How It Works — in-product help
+
+HELP-01 | OBSERVED | A dedicated guide explains leave submission, attendance,
+payslips and other modules. Sections include Leave Request Journey, Leave
+Types Explained, Two Portals One System, Everything In The Portal, Request
+Status Guide and final get-started links.
+
+HELP-02 | GUIDE | Five-step leave journey: Apply for Leave; Instant Submission;
+Admin Review; You're Notified; Need to Cancel? It describes live balance checking,
+optional documents, email/WhatsApp alerts, single-step approval and restoration
+after approved cancellation. Detailed claims are preserved in sections 8–10/17.
+
+HELP-03 | OBSERVED | Feature shortcut cards link to Apply Leave, My Requests,
+Leave Balance, Attendance & Punch, Team Calendar, Payslips and My Assets.
+Final CTAs link to Apply for Leave and Dashboard.
+
+HELP-04 | GUIDE | Employee Portal responsibilities: leave application/tracking,
+punch/attendance tracking, payslips/balance, team calendar/holidays. Admin Portal
+responsibilities: approve/reject leave, run payroll/generate payslips, manage
+employees, holidays and shifts. No additional admin screens were inspected.
+
+HELP-05 | REQUIREMENT | Preserve the need for accurate user help and policy
+explanation in the replacement. The guide's exact graphic layout/copy is not a
+required design. Help must agree with the eventual confirmed business rules.
+
+Evidence: 41 complete guide snapshot; initial-reference/16-how-it-works.jpg.
+
+[24] Responsive behavior and interaction evidence
+
+RESP-01 | REQUIREMENT | The replacement must work fully on mobile, tablet and
+desktop. This applies to authentication, forms, lists, calendar, notifications,
+drawers, account controls, dialogs, upload controls and all async states.
+
+RESP-02 | OBSERVED | Explicit reference captures include 390px mobile dashboard
+and leave form, 768px tablet dashboard, 1440px desktop dashboard/leave form,
+and 1440px dark dashboard/attendance. Many other captures were taken at a
+458px browser innerWidth with approximately 443px page content due to scrollbar
+measurement. Authentication re-review used 1280px browser innerWidth.
+
+RESP-03 | OBSERVED | Navigation changes between persistent sidebar and drawer.
+Dashboard cards/forms reorganize at narrower widths. This proves the current
+portal has responsive treatments, not that every breakpoint or dialog is correct.
+
+RESP-04 | UNVERIFIED | Exact breakpoints, all overflow cases, smallest devices,
+landscape, virtual keyboard, screen reader behavior, browser compatibility,
+reduced motion and all touch-target sizes were not comprehensively tested.
+Some narrow dashboard edges appear crowded/clipped. Do not copy those defects.
+
+RESP-05 | REQUIREMENT | Feature parity includes usable keyboard/focus behavior,
+clear form labels, readable calendar/list data, notification scrolling, form
+validation feedback and loading/empty/error/success states across device sizes.
+These are completion requirements for the new build, not retrospective claims
+that all of them worked in the current portal.
+
+[25] Functional dependencies and data concepts
+
+MODEL-01 | OBSERVED | Employee identity is reused by account menu, profile,
+greeting, directory, calendar and notifications. Registration/profile expose
+company, department, designation, role and personal details as distinct concepts.
+The storage schema and cross-company access rules are not visible.
+
+MODEL-02 | OBSERVED | Leave application, balance, requests, dashboard, calendar
+and reports are connected concepts. Accrued, used, remaining, monthly usage and
+request counts must remain distinct. The guide connects approved cancellation
+to balance restoration; the exact transaction model is unverified.
+
+MODEL-03 | OBSERVED | Current attendance session, daily history, correction
+requests, directory presence and scheduled reminders are related features.
+Their internal event processing and status-calculation rules are unknown.
+
+MODEL-04 | OBSERVED | Holidays carry a category and closure designation. Working
+days depend at least on the department weekend policy shown for IT and company
+holiday policy text. The confirmed reminders require a working-day decision.
+
+MODEL-05 | UNVERIFIED | Proposed implementation entities can be derived later,
+but this inspection does not prove table names, APIs, database vendor, backend
+framework, realtime provider, messaging vendor or existing source architecture.
+No hidden application state, storage, credentials or source code was inspected.
+
+[26] Inconsistencies and limits that must not become invented requirements
+
+GAP-01 | OBSERVED | Leave-type taxonomy differs between application (Paid,
+Permission), request filters (Paid, Unpaid, WFH) and calendar legend (six types).
+Do not collapse or expand types without an explicit later decision.
+
+GAP-02 | OBSERVED | Attendance summaries are labelled Last 30 days but change
+with selected historical month. Separate the intended metric scope from its label.
+
+GAP-03 | OBSERVED | Full Day attendance can have missing times. Do not determine
+present/absent from missing timestamps alone without a business rule.
+
+GAP-04 | OBSERVED | The avatar/profile editor allows free-text department and
+designation while registration uses lists. Whether employee edits require approval
+or update organization membership is not exposed.
+
+GAP-05 | OBSERVED | Calendar/notification histories can contain information that
+does not line up with current holiday configuration. Schedule intent confirmed
+by the user is authoritative for the new build, not guessed historical behavior.
+
+GAP-06 | OBSERVED | Identical new-holiday notifications appeared more than once.
+Whether caused by repeat saves, duplicate events or deliberate behavior is unknown.
+
+GAP-07 | OBSERVED | /profile uses a Dashboard header; quota text contains repeated
+Accrued Quota Quota wording. These are existing presentation inconsistencies,
+not features to reproduce.
+
+GAP-08 | UNVERIFIED | Exact location rule and operational success/error behavior
+of punching are unavailable without exercising a live punch. Location-based
+punching remains explicitly in scope as confirmed by the user.
+
+GAP-09 | UNVERIFIED | Populated leave requests, correction statuses, payslips,
+assets and report exports were unavailable. Their empty-state screenshots are
+not complete specifications for their populated workflows.
+
+GAP-10 | UNVERIFIED | External email/WhatsApp delivery and admin-side processing
+are described by help but not verified from this employee account. Admin access
+is deferred; this document does not request it or assume a future inspection.
+
+GAP-11 | UNVERIFIED | No live error/permission-denied states were forced. Network,
+authorization, geolocation, file and transaction errors must be specified later
+where this record provides no observed message or behavior.
+
+[27] Later acceptance checklist — derived from the recorded scope
+
+These are coverage targets for the replacement. They do not claim the current
+portal passed the checks and do not prescribe its visual design or architecture.
+
+ACCEPT-01 | REQUIREMENT | An employee can sign in, recover access, register using
+the permitted employee flow, and reach the correct signed-in destinations.
+Field validation and authorization must be defined independently of labels alone.
+
+ACCEPT-02 | REQUIREMENT | All accessible modules and account controls are usable
+across mobile/tablet/desktop. Theme switching works across the product, and its
+intended persistence/default behavior is explicit.
+
+ACCEPT-03 | REQUIREMENT | Leave choices, quota explanations, attachment rules,
+date rules, request statuses, search/filter/sort, approval-dependent updates and
+cancellation balance restoration match the later confirmed policy.
+
+ACCEPT-04 | REQUIREMENT | Attendance handles location-based punching, current
+session states, history, missing times, month selection, summaries and correction
+requests. Location and time policy choices must be resolved before acceptance.
+
+ACCEPT-05 | REQUIREMENT | The 11:00 AM missing-punch-in and 6:30 PM missing-punch-out
+reminders target the intended employees under the confirmed working-day policy.
+Birthday and holiday-added/tomorrow alerts remain part of observed notification
+feature scope. External leave notifications remain guide-described dependencies.
+
+ACCEPT-06 | REQUIREMENT | Calendar day details, team availability, employee search
+and department filtering, profile editing/photo controls, holiday closures,
+payslip access, assigned assets and personal reports have complete populated and
+empty states using explicit later specifications for currently unavailable data.
+
+ACCEPT-07 | REQUIREMENT | Every asynchronous action has an intentional loading,
+success, error and empty behavior as applicable. Server-side validation and
+authorization must enforce final business rules; disabled buttons, browser
+attributes and hidden controls alone are not enforcement.
+
+[28] Evidence package and capture caveats
+
+The complete package includes this functional record, an offline HTML reading
+version, a feature register extracted from the labeled entries, a screenshot
+index, a machine-readable evidence manifest, all first-walkthrough files, and
+new screenshot/text/control-attribute evidence.
+
+Each detailed capture generally has a screenshot plus .txt DOM snapshot and
+.json metadata. Captures 48–49 instead preserve the live accessibility tree;
+50 is a scrolling screenshot. Older captures are retained, including attempted
+interactions, so the audit trail is not silently rewritten into successful tests.
+
+Naming caveats: initial 01/02/03 filenames say desktop but are narrow captures;
+19-calendar-empty-selected-day contains populated November 25 details;
+24-directory-employee-details did not open employee details;
+06/08 date-draft filenames do not establish date validation;
+04-notifications-dark did not retain the panel in its DOM snapshot;
+41-guide-dark-complete was light at capture time. Human index labels correct
+these descriptions. Some screenshots use a viewport fallback where full-page
+capture failed; their text snapshots still preserve the available screen text.
+
+No claim is made that inaccessible backend rules or unseen record states were
+fully reverse-engineered. All directly observed, user-confirmed and guide-described
+features are recorded separately so future implementation does not depend on
+another visit or confuse evidence with assumptions.

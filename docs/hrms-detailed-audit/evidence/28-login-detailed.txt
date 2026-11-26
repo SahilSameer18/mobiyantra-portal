@@ -1,0 +1,16 @@
+- img "Mobiyantra"
+- heading "Mobiyantra Work Portal" [level=1]
+- paragraph: Leave Management System
+- tablist:
+  - tab "Login" [selected]
+  - tab "Sign Up"
+- tabpanel "Login":
+  - generic: Email
+  - textbox "Email":
+    - /placeholder: your@email.com
+  - generic: Password
+  - textbox "Password":
+    - /placeholder: ••••••••
+  - button "Forgot password?"
+  - button "Login"
+- region "Notifications alt+T"

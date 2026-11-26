@@ -1,0 +1,232 @@
+- banner:
+  - button:
+  - heading "Attendance" [level=1]
+  - button "Punch In":
+    - text: Punch In
+  - button "Switch to light mode":
+  - button:
+- main:
+  - heading "Attendance" [level=1]
+  - paragraph: Track your daily punch in / punch out
+  - paragraph: Wednesday, November 25, 2026
+  - heading "Session Complete" [level=2]
+  - paragraph:
+    - text: Punch In
+  - paragraph: 10:08 AM
+  - paragraph:
+    - text: Punch Out
+  - paragraph: 06:43 PM
+  - paragraph: Total Hours This Session
+  - paragraph: 8.59 hrs
+  - button "Punch In":
+    - generic: Punch In
+  - generic: "20"
+  - generic: Present Days
+  - generic: Last 30 days
+  - generic: "0"
+  - generic: Work From Home
+  - generic: Last 30 days
+  - generic: "0"
+  - generic: Half Days
+  - generic: Last 30 days
+  - generic: 8.2h
+  - generic: Avg. Hours/Day
+  - generic: Last 30 days
+  - heading "Attendance History" [level=2]
+  - button "Refresh":
+  - combobox:
+    - option "November 2026"
+    - option "October 2026" [selected]
+    - option "September 2026"
+    - option "August 2026"
+    - option "July 2026"
+    - option "June 2026"
+    - option "May 2026"
+    - option "April 2026"
+    - option "March 2026"
+    - option "February 2026"
+    - option "January 2026"
+    - option "December 2025"
+  - paragraph: Fri, Oct 30
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:05 AM
+  - paragraph: Out
+  - paragraph: 06:12 PM
+  - paragraph: Hrs
+  - paragraph: 8.1h
+  - button "Request correction":
+  - paragraph: Thu, Oct 29
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:50 AM
+  - paragraph: Out
+  - paragraph: 06:12 PM
+  - paragraph: Hrs
+  - paragraph: 8.4h
+  - button "Request correction":
+  - paragraph: Wed, Oct 28
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:10 AM
+  - paragraph: Out
+  - paragraph: 06:20 PM
+  - paragraph: Hrs
+  - paragraph: 8.2h
+  - button "Request correction":
+  - paragraph: Tue, Oct 27
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:51 AM
+  - paragraph: Out
+  - paragraph: 06:06 PM
+  - paragraph: Hrs
+  - paragraph: 8.3h
+  - button "Request correction":
+  - paragraph: Mon, Oct 26
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:08 AM
+  - paragraph: Out
+  - paragraph: 06:09 PM
+  - paragraph: Hrs
+  - paragraph: 8.0h
+  - button "Request correction":
+  - paragraph: Fri, Oct 23
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:58 AM
+  - paragraph: Out
+  - paragraph: 06:24 PM
+  - paragraph: Hrs
+  - paragraph: 8.4h
+  - button "Request correction":
+  - paragraph: Thu, Oct 22
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:02 AM
+  - paragraph: Out
+  - paragraph: 07:08 PM
+  - paragraph: Hrs
+  - paragraph: 9.1h
+  - button "Request correction":
+  - paragraph: Wed, Oct 21
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:59 AM
+  - paragraph: Out
+  - paragraph: 06:15 PM
+  - paragraph: Hrs
+  - paragraph: 8.3h
+  - button "Request correction":
+  - paragraph: Mon, Oct 19
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:57 AM
+  - paragraph: Out
+  - paragraph: 06:07 PM
+  - paragraph: Hrs
+  - paragraph: 8.2h
+  - button "Request correction":
+  - paragraph: Fri, Oct 16
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:51 AM
+  - paragraph: Out
+  - paragraph: 06:12 PM
+  - paragraph: Hrs
+  - paragraph: 8.3h
+  - button "Request correction":
+  - paragraph: Thu, Oct 15
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:50 AM
+  - paragraph: Out
+  - paragraph: 06:07 PM
+  - paragraph: Hrs
+  - paragraph: 8.3h
+  - button "Request correction":
+  - paragraph: Wed, Oct 14
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:01 AM
+  - paragraph: Out
+  - paragraph: 06:11 PM
+  - paragraph: Hrs
+  - paragraph: 8.2h
+  - button "Request correction":
+  - paragraph: Tue, Oct 13
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:47 AM
+  - paragraph: Out
+  - paragraph: 06:31 PM
+  - paragraph: Hrs
+  - paragraph: 8.7h
+  - button "Request correction":
+  - paragraph: Mon, Oct 12
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:28 AM
+  - paragraph: Out
+  - paragraph: 06:04 PM
+  - paragraph: Hrs
+  - paragraph: 7.6h
+  - button "Request correction":
+  - paragraph: Fri, Oct 9
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:44 AM
+  - paragraph: Out
+  - paragraph: 06:18 PM
+  - paragraph: Hrs
+  - paragraph: 8.6h
+  - button "Request correction":
+  - paragraph: Thu, Oct 8
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:02 AM
+  - paragraph: Out
+  - paragraph: 06:13 PM
+  - paragraph: Hrs
+  - paragraph: 8.2h
+  - button "Request correction":
+  - paragraph: Wed, Oct 7
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:04 AM
+  - paragraph: Out
+  - paragraph: 06:11 PM
+  - paragraph: Hrs
+  - paragraph: 8.1h
+  - button "Request correction":
+  - paragraph: Tue, Oct 6
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:08 AM
+  - paragraph: Out
+  - paragraph: 06:11 PM
+  - paragraph: Hrs
+  - paragraph: 8.1h
+  - button "Request correction":
+  - paragraph: Mon, Oct 5
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:28 AM
+  - paragraph: Out
+  - paragraph: 06:03 PM
+  - paragraph: Hrs
+  - paragraph: 7.6h
+  - button "Request correction":
+  - paragraph: Thu, Oct 1
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 11:38 AM
+  - paragraph: Out
+  - paragraph: 06:11 PM
+  - paragraph: Hrs
+  - paragraph: 6.5h
+  - button "Request correction":
+  - heading "My Correction Requests" [level=2]
+  - paragraph: No correction requests yet
+- region "Notifications alt+T"

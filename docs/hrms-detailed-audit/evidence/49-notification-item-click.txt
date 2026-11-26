@@ -1,0 +1,108 @@
+Browser tab: 1, Title: "Mobiyantra Work Portal", URL: "https://mobiyantraworkportal.co.in/dashboard".
+1 AXWebArea Mobiyantra Work Portal, URL: mobiyantraworkportal.co.in/dashboard
+	6 container root
+		27 container
+			79 button
+				80 image
+			28 heading Dashboard, Value: 1
+				29 text Dashboard
+			40 button Punch In
+				41 image
+				42 text Punch In
+			31 button Switch to dark mode
+				43 image
+			81 container
+				82 button
+					83 image
+				84 image
+				85 text Notifications
+				86 container
+					87 text Don't forget to punch out!
+					88 text It's past 6:30 PM — please punch out before you leave for the day.
+					89 text 25 Nov, 06:30 pm
+					90 text Don't forget to punch out!
+					91 text It's past 6:30 PM — please punch out before you leave for the day.
+					92 text 24 Nov, 06:30 pm
+					93 text Don't forget to punch out!
+					94 text It's past 6:30 PM — please punch out before you leave for the day.
+					95 text 20 Nov, 06:30 pm
+					96 text Don't forget to punch out!
+					97 text It's past 6:30 PM — please punch out before you leave for the day.
+					98 text 19 Nov, 06:30 pm
+					99 text Don't forget to punch out!
+					100 text It's past 6:30 PM — please punch out before you leave for the day.
+					101 text 16 Nov, 06:30 pm
+					102 text 🎉 It's a birthday today!
+					103 text Today is Diya's birthday — don't forget to wish them!
+					104 text 14 Nov, 09:00 am
+					105 text Haven't punched in yet?
+					106 text Don't forget to mark your attendance for today.
+					107 text 11 Nov, 11:00 am
+					108 text Haven't punched in yet?
+					109 text Don't forget to mark your attendance for today.
+					110 text 10 Nov, 11:00 am
+					111 text Haven't punched in yet?
+					112 text Don't forget to mark your attendance for today.
+					113 text 9 Nov, 11:00 am
+					114 text 📅 Holiday Tomorrow
+					115 text Tomorrow is Diwali — the office will be closed.
+					116 text 7 Nov, 06:00 pm
+					117 text Don't forget to punch out!
+					118 text It's past 6:30 PM — please punch out before you leave for the day.
+					119 text 6 Nov, 06:30 pm
+					120 text 📅 New Holiday Added
+					121 text Diwali on 2026-11-08 — the office will be closed.
+					122 text 31 Oct, 10:31 pm
+					123 text 📅 New Holiday Added
+					124 text Diwali on 2026-11-08 — the office will be closed.
+					125 text 31 Oct, 10:31 pm
+					126 text Don't forget to punch out!
+					127 text It's past 6:30 PM — please punch out before you leave for the day.
+					128 text 22 Oct, 06:30 pm
+					129 text 📅 New Holiday Added
+					130 text Dussehra on 2026-10-20 — the office will be closed.
+					131 text 19 Oct, 07:19 pm
+					132 text 🎉 It's a birthday today!
+					133 text Today is Shaily Singh's birthday — don't forget to wish them!
+					134 text 19 Oct, 09:00 am
+					135 text Don't forget to punch out!
+					136 text It's past 6:30 PM — please punch out before you leave for the day.
+					137 text 13 Oct, 06:30 pm
+			44 container
+				45 text WEDNESDAY, 25 NOVEMBER
+				46 heading Good Night, Sahil 👋, Value: 2
+					47 text Good Night ,  Sahil  👋
+				48 text Here's your leave overview for today.
+			49 container
+				50 image
+				51 container
+					52 text 0 / 1
+				53 text Used This Month Paid Leave quota
+			54 container
+				55 image
+				56 text 1 Monthly Quota Paid Leave
+			57 container
+				58 image
+				59 text 0 Used This Month Approved this month
+			60 container
+				61 image
+				62 text 0 Approved Leave requests
+			63 container
+				64 image
+				65 text 0 Pending Awaiting approval
+			66 image
+			67 heading Leave Balance, Value: 3
+				68 text Leave Balance
+			69 text Paid Leave 2 days available Permission Leave Unlimited
+			70 text Available anytime, no quota deducted — but unpaid
+			71 link Description: Apply for Leave, Value: mobiyantraworkportal.co.in/apply-leave
+			72 image
+			73 heading Recent Leave Requests, Value: 3
+				74 text Recent Leave Requests
+			75 link Description: View all, Value: mobiyantraworkportal.co.in/my-requests
+			76 image
+			77 text No leave requests yet
+			78 link Description: Apply for your first leave →, Value: mobiyantraworkportal.co.in/apply-leave
+		39 container Notifications alt+T
+
+The focused UI element is 1 AXWebArea Mobiyantra Work Portal, URL: mobiyantraworkportal.co.in/dashboard

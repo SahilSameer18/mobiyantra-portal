@@ -1,0 +1,82 @@
+- banner:
+  - button:
+  - heading "Team Calendar" [level=1]
+  - button "Punch In":
+    - text: Punch In
+  - button "Switch to light mode":
+  - button:
+- main:
+  - heading "Team Calendar" [level=1]
+  - paragraph: View team availability and plan your leaves accordingly
+  - heading "November 2026" [level=2]
+  - button:
+  - button:
+  - generic: S
+  - generic: M
+  - generic: T
+  - generic: W
+  - generic: T
+  - generic: F
+  - generic: S
+  - generic: "1"
+  - generic: "2"
+  - generic: "3"
+  - generic: "+1"
+  - generic: "4"
+  - generic: "5"
+  - generic: "6"
+  - generic: "7"
+  - generic: "8"
+  - generic: "9"
+  - generic: "10"
+  - generic: "11"
+  - generic: "12"
+  - generic: "13"
+  - generic: "14"
+  - generic: "15"
+  - generic: "16"
+  - generic: "17"
+  - generic: "18"
+  - generic: "19"
+  - generic: "20"
+  - generic: "21"
+  - generic: "22"
+  - generic: "23"
+  - generic: "24"
+  - generic: "25"
+  - generic: "26"
+  - generic: "27"
+  - generic: "28"
+  - generic: "29"
+  - generic: "30"
+  - generic: Leave Types
+  - generic: Paid Leave
+  - generic: Loss of Pay
+  - generic: Work From Home
+  - generic: Casual Leave
+  - generic: Sick Leave
+  - generic: Permission Leave
+  - heading "On Leave Today" [level=3]
+  - paragraph: 1 team member
+  - generic: PC
+  - generic: Piyush Chaudhary
+  - generic: Paid Leave
+  - heading "Upcoming Leaves" [level=3]
+  - paragraph: Next scheduled leaves
+  - paragraph: No upcoming leaves
+  - heading "Team Statistics" [level=3]
+  - generic: Total Team Size
+  - generic: "31"
+  - generic: On Leave Today
+  - generic: "1"
+  - generic: Upcoming Leaves
+  - generic: "0"
+  - generic: Availability Rate
+  - generic: 97%
+  - generic: November 25, 2026
+  - button:
+  - generic: 1 member on leave
+  - generic: PC
+  - paragraph: Piyush Chaudhary
+  - generic: Paid Leave
+- region "Notifications alt+T"

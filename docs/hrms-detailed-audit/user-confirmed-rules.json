@@ -1,0 +1,37 @@
+{
+  "source": "User statements in this chat; not inferred from UI source code",
+  "scope": {
+    "goal": "Employee-portal feature and behavior parity",
+    "visual_design": "New design; do not copy the existing portal design",
+    "responsive": [
+      "mobile",
+      "tablet",
+      "desktop"
+    ],
+    "admin_portal": "Deferred; unavailable access; do not assume another walkthrough",
+    "future_access": "No future access assumed"
+  },
+  "location_based_punch_in": {
+    "confirmed": true,
+    "exact_location_validation": "Not exposed; recording versus geofence is unverified"
+  },
+  "office_hours": {
+    "start": "10:00",
+    "end": "18:00",
+    "timezone": "Not explicitly supplied"
+  },
+  "reminders": [
+    {
+      "time": "11:00",
+      "recipient": "Individual employee who has not punched in",
+      "working_days_only": true,
+      "confirmed_by_user": true
+    },
+    {
+      "time": "18:30",
+      "recipient": "Employees who have not punched out",
+      "confirmed_by_user": true,
+      "eligibility_details": "Working-day context supplied; approved leave, all-day absence, weekends and multiple-session edge cases not specified"
+    }
+  ]
+}

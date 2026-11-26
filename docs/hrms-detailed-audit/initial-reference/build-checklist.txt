@@ -1,0 +1,163 @@
+HRMS REBUILD — DISCOVERY RECORD
+Reviewed: 25 November 2026
+Source: https://mobiyantraworkportal.co.in
+Scope: signed-in Employee Portal plus previously captured login and sign-up.
+Status: initial employee-side inventory; not a complete HR/Admin specification.
+
+EVIDENCE
+Observed = visible in this account or an opened form.
+Guide = described by the portal's How It Works page; not transaction-tested.
+Unknown = requires another account, populated data, or an authorized test environment.
+No leave, correction, registration, profile update, or attendance punch was submitted.
+
+1. AUTHENTICATION — OBSERVED
+Login: email, password, Login, Forgot password, Sign Up tab.
+Sign-up: name, email, date of birth, join date, company, department, designation,
+phone, gender, role (defaults to Employee), password, confirm password.
+Unknown: password policy, email verification, registration approval, role assignment
+permissions, duplicate accounts, dependent dropdowns, recovery and session expiry.
+Role choices displayed at registration must not be treated as authorization rules.
+References: 01–02.
+
+2. APPLICATION SHELL — OBSERVED
+Desktop persistent sidebar; narrow-screen navigation drawer; page header;
+Punch In shortcut; light/dark mode control; notification dropdown; account menu
+with My Profile and Logout. Theme switching and logout were not exercised.
+References: 04, 17, 20, 23–24.
+
+3. DASHBOARD — OBSERVED
+Personal greeting, monthly quota and usage, approved/pending request counts,
+leave balance, recent requests, apply-leave and view-all links, empty states.
+References: 03, 20, 23–24.
+
+4. APPLY LEAVE — OBSERVED
+Paid Leave and Permission Leave; start date, end date, required reason;
+optional PDF/DOC/JPG/PNG attachment (UI states maximum 5MB); submit and reset.
+Shown policy: Paid Leave earns one day/month and carries forward; Permission
+Leave is unlimited and unpaid with no quota deduction. Weekends and company
+holidays do not count as leave; IT text explicitly mentions Saturday + Sunday.
+Guide additionally says paid leave never expires and cannot be used on Mondays
+or Fridays; only Permission Leave can be used on those days. Confirm these rules.
+Unknown: accrual start/proration, backdating, notice periods, overlap handling,
+partial days, date validation, concurrent balance updates, actual attachment validation.
+References: 05, 21–22.
+
+5. LEAVE REQUEST TRACKING — OBSERVED / GUIDE
+Observed: total, pending, approved, rejected, cancelled counters; search;
+status filters; type filters (Paid, Unpaid, Work From Home); sort by date/status;
+result count and empty state. No requests available to inspect.
+Guide: submission -> Pending -> one HR/Admin decision -> Approved or Rejected.
+Rejection can include remarks. Approved leave may be cancelled before it ends:
+cancellation request -> HR/Admin sign-off -> Cancelled; balance restored.
+Guide: email/WhatsApp alerts to HR/Admin on submission; email/WhatsApp/in-app
+alerts to employee on decision; balance and team calendar update immediately.
+Unknown: request detail layout, pending-request withdrawal, cancellation denial,
+intermediate cancellation states, attachment access, audit trail and actual alerts.
+References: 06, 25, 16.
+
+6. LEAVE BALANCE — OBSERVED
+Monthly quota/used, accrued/used/remaining totals, yearly month-wise usage,
+policy explanation and no-usage state. Current balances are examples, not constants.
+Reference: 07.
+
+7. ATTENDANCE — OBSERVED
+Daily session panel with punch in/out times, total hours and Punch In action;
+last-30-day present/WFH/half-day/average-hours summaries; month selector;
+refresh; dated history with status, times, hours and Request correction action.
+Correction form: date, corrected punch-in and punch-out times, required reason,
+Submit Request and Cancel. Copy says admin reviews correction requests.
+My Correction Requests section is empty.
+Unknown: active punch-out state, multiple sessions, overnight shifts, timezone,
+rounding, late/half-day thresholds, locations, geofencing, correction outcomes.
+References: 09–10.
+
+8. TEAM CALENDAR — OBSERVED
+Month grid, previous/next controls, leave indicators, leave-type legend,
+On Leave Today, upcoming leaves, team size and availability statistics.
+Legend includes Paid, Loss of Pay, WFH, Casual, Sick and Permission Leave.
+Unknown: day details, event-click behavior and calendar date correctness.
+Reference: 11.
+
+9. EMPLOYEE DIRECTORY — OBSERVED
+Employee/working/department counts; name/email/designation search;
+department selector; cards with avatar, name, designation, department and
+Working/Offline/On Leave status. No employee detail workflow verified.
+Reference: 12.
+
+10. HOLIDAYS — OBSERVED
+India holiday list grouped by month, date, national/festival category,
+and Office Closed badge on selected dates. Company closure and public holiday
+are distinct in this UI; confirm which dates affect leave and attendance.
+Unknown: company/region scope, year navigation, admin editing and source upkeep.
+Reference: 13.
+
+11. PAYSLIPS — OBSERVED / GUIDE
+Observed: employee view/download purpose and no-payslips state.
+Guide: HR/Admin runs payroll and generates payslips.
+Unknown: populated list, payslip PDF, earnings/deductions, payroll calculations,
+pay periods, publishing, statutory rules and permissions.
+Reference: 08.
+
+12. ASSETS — OBSERVED / GUIDE
+Observed: employee's assigned company equipment and empty state.
+Guide examples: laptop, ID card and accessories.
+Unknown: populated asset fields, assignment/return/acknowledgement workflows.
+Reference: 14.
+
+13. REPORTS — OBSERVED
+Personal leave analytics; total/approved/pending/rejected counts; balance
+overview; Export Report disabled when no data; empty analytics message.
+Unknown: populated charts, filters, exported file format and report contents.
+Reference: 15.
+
+14. PROFILE — OBSERVED
+Avatar/change-photo control; name, role, designation and department summary;
+personal details including email, company, phone, DOB and join date.
+Edit form exposes name, phone, department, designation, DOB and gender;
+Save Changes and Cancel. Photo upload not opened and no updates saved.
+Confirm whether employees should be allowed to change department/designation.
+References: 18–19.
+
+15. NOTIFICATIONS — OBSERVED / GUIDE
+Observed: dated attendance reminders, birthday alerts and holiday alerts.
+Guide: leave decision notifications and external email/WhatsApp delivery.
+Unknown: unread/read behavior, delivery retries, preferences and audit records.
+Reference: 17.
+
+RESPONSIVE REQUIREMENT FOR THE NEW SYSTEM
+Support mobile, tablet and desktop throughout all modules, dialogs and forms.
+Use screenshots as references, not proof the current system is fully responsive.
+Captured widths: 390px dashboard/apply-leave, 768px dashboard, 1440px
+dashboard/apply-leave. Other captures use the default narrow browser viewport
+(approximately 443px); original 01/02/03 filenames say desktop but are narrow.
+Verify 320/390/768/1024/1440 widths, keyboard/focus, readable calendar/table
+layouts, no clipped content, appropriate touch targets and validation states.
+The 390px dashboard capture suggests right-edge crowding; check overflow in rebuild.
+
+ADMIN PORTAL — STILL TO REVIEW
+The guide describes a separate HR/Admin portal. No admin screens were available
+in this Employee account, and no admin URL was guessed.
+Need capture: admin dashboard; leave/cancellation approval queues and details;
+employee onboarding/editing/offboarding; company/department/designation setup;
+roles and permissions; leave policies and balances; attendance corrections;
+shifts; payroll/payslip generation; holidays; asset inventory/assignments;
+reports/exports; notification/integration settings and audit history.
+Manager or other role workflows are unknown until those roles are inspected.
+
+OPEN QUESTIONS BEFORE IMPLEMENTATION
+1. Do Monday/Friday restrictions and indefinite carry-forward still apply?
+2. Why do request filters/calendar expose more leave types than Apply Leave?
+3. Which policies, holidays and visibility rules vary by company/department?
+4. Which employee profile fields may employees edit themselves?
+5. Which current alerts/integrations actually operate, and who receives them?
+6. What are the real populated request, payslip, asset and export formats?
+7. What historical data and documents must migrate, and from what export source?
+
+PROPOSED BUILD ORDER — SUBJECT TO ADMIN REVIEW
+A. Authentication, employee/company data, permissions and responsive shell.
+B. Leave policies, application, approval, cancellation and balance ledger.
+C. Attendance, shifts, corrections and calendar/holiday integration.
+D. Directory, profile and notifications.
+E. Payroll/payslips, assets, reports and migration based on verified admin flows.
+For each module, cover loading, empty, success and error states and enforce
+validation/authorization server-side. Build transaction tests in a test environment.

@@ -1,0 +1,971 @@
+{
+  "review_date": "2026-11-25",
+  "source": "https://mobiyantraworkportal.co.in",
+  "scope": "Accessible Employee Portal; feature/behavior record, not a visual clone",
+  "routes_observed": [
+    "/apply-leave",
+    "/attendance",
+    "/auth",
+    "/balance",
+    "/calendar",
+    "/dashboard",
+    "/employees",
+    "/holidays",
+    "/how-it-works",
+    "/my-assets",
+    "/my-requests",
+    "/payslips",
+    "/profile",
+    "/reports"
+  ],
+  "feature_entries": 175,
+  "status_counts": {
+    "OBSERVED": 118,
+    "UNVERIFIED": 30,
+    "GUIDE": 11,
+    "CONFIRMED": 4,
+    "REQUIREMENT": 12
+  },
+  "detailed_captures": [
+    {
+      "id": "01-dashboard-light-narrow",
+      "label": "01 dashboard light narrow",
+      "screenshot": "screenshots/01-dashboard-light-narrow.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1317,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/01-dashboard-light-narrow.txt",
+      "control_metadata": "evidence/01-dashboard-light-narrow.json",
+      "theme_action_title": "Switch to dark mode"
+    },
+    {
+      "id": "02-dashboard-dark",
+      "label": "02 dashboard dark",
+      "screenshot": "screenshots/02-dashboard-dark.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1317,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/02-dashboard-dark.txt",
+      "control_metadata": "evidence/02-dashboard-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "03-dark-after-reload",
+      "label": "03 dark after reload",
+      "screenshot": "screenshots/03-dark-after-reload.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1317,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/03-dark-after-reload.txt",
+      "control_metadata": "evidence/03-dark-after-reload.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "04-notifications-dark",
+      "label": "Dark dashboard; notification panel not retained in DOM capture",
+      "screenshot": "screenshots/04-notifications-dark.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1317,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/04-notifications-dark.txt",
+      "control_metadata": "evidence/04-notifications-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "05-apply-leave-dark-empty",
+      "label": "05 apply leave dark empty",
+      "screenshot": "screenshots/05-apply-leave-dark-empty.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1260,
+      "url": "https://mobiyantraworkportal.co.in/apply-leave",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/05-apply-leave-dark-empty.txt",
+      "control_metadata": "evidence/05-apply-leave-dark-empty.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "06-paid-leave-monday-draft",
+      "label": "Paid-leave quota and reason draft; Monday validation inconclusive",
+      "screenshot": "screenshots/06-paid-leave-monday-draft.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1502,
+      "url": "https://mobiyantraworkportal.co.in/apply-leave",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/06-paid-leave-monday-draft.txt",
+      "control_metadata": "evidence/06-paid-leave-monday-draft.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "07-permission-leave-draft",
+      "label": "07 permission leave draft",
+      "screenshot": "screenshots/07-permission-leave-draft.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1459,
+      "url": "https://mobiyantraworkportal.co.in/apply-leave",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/07-permission-leave-draft.txt",
+      "control_metadata": "evidence/07-permission-leave-draft.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "08-paid-leave-date-range",
+      "label": "Date-entry attempt; complete range not verified",
+      "screenshot": "screenshots/08-paid-leave-date-range.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1502,
+      "url": "https://mobiyantraworkportal.co.in/apply-leave",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/08-paid-leave-date-range.txt",
+      "control_metadata": "evidence/08-paid-leave-date-range.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "09-leave-reset",
+      "label": "09 leave reset",
+      "screenshot": "screenshots/09-leave-reset.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1260,
+      "url": "https://mobiyantraworkportal.co.in/apply-leave",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/09-leave-reset.txt",
+      "control_metadata": "evidence/09-leave-reset.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "10-requests-default-dark",
+      "label": "10 requests default dark",
+      "screenshot": "screenshots/10-requests-default-dark.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1045,
+      "url": "https://mobiyantraworkportal.co.in/my-requests",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/10-requests-default-dark.txt",
+      "control_metadata": "evidence/10-requests-default-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "11-requests-active-filters",
+      "label": "11 requests active filters",
+      "screenshot": "screenshots/11-requests-active-filters.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1294,
+      "url": "https://mobiyantraworkportal.co.in/my-requests",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/11-requests-active-filters.txt",
+      "control_metadata": "evidence/11-requests-active-filters.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "12-attendance-dark",
+      "label": "12 attendance dark",
+      "screenshot": "screenshots/12-attendance-dark.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 2279,
+      "url": "https://mobiyantraworkportal.co.in/attendance",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/12-attendance-dark.txt",
+      "control_metadata": "evidence/12-attendance-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "13-correction-missing-times",
+      "label": "13 correction missing times",
+      "screenshot": "screenshots/13-correction-missing-times.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 2279,
+      "url": "https://mobiyantraworkportal.co.in/attendance",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 458,
+        "width": 458
+      },
+      "text_evidence": "evidence/13-correction-missing-times.txt",
+      "control_metadata": "evidence/13-correction-missing-times.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "14-correction-reason-only",
+      "label": "14 correction reason only",
+      "screenshot": "screenshots/14-correction-reason-only.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 2279,
+      "url": "https://mobiyantraworkportal.co.in/attendance",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 458,
+        "width": 458
+      },
+      "text_evidence": "evidence/14-correction-reason-only.txt",
+      "control_metadata": "evidence/14-correction-reason-only.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "15-attendance-empty-month",
+      "label": "15 attendance empty month",
+      "screenshot": "screenshots/15-attendance-empty-month.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1420,
+      "url": "https://mobiyantraworkportal.co.in/attendance",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/15-attendance-empty-month.txt",
+      "control_metadata": "evidence/15-attendance-empty-month.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "16-attendance-october",
+      "label": "16 attendance october",
+      "screenshot": "screenshots/16-attendance-october.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 2395,
+      "url": "https://mobiyantraworkportal.co.in/attendance",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/16-attendance-october.txt",
+      "control_metadata": "evidence/16-attendance-october.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "17-calendar-dark",
+      "label": "17 calendar dark",
+      "screenshot": "screenshots/17-calendar-dark.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1357,
+      "url": "https://mobiyantraworkportal.co.in/calendar",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/17-calendar-dark.txt",
+      "control_metadata": "evidence/17-calendar-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "18-calendar-selected-day",
+      "label": "18 calendar selected day",
+      "screenshot": "screenshots/18-calendar-selected-day.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1357,
+      "url": "https://mobiyantraworkportal.co.in/calendar",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/18-calendar-selected-day.txt",
+      "control_metadata": "evidence/18-calendar-selected-day.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "19-calendar-empty-selected-day",
+      "label": "November 25 selected-day details (populated)",
+      "screenshot": "screenshots/19-calendar-empty-selected-day.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1357,
+      "url": "https://mobiyantraworkportal.co.in/calendar",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/19-calendar-empty-selected-day.txt",
+      "control_metadata": "evidence/19-calendar-empty-selected-day.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "20-calendar-next-month",
+      "label": "20 calendar next month",
+      "screenshot": "screenshots/20-calendar-next-month.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1346,
+      "url": "https://mobiyantraworkportal.co.in/calendar",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/20-calendar-next-month.txt",
+      "control_metadata": "evidence/20-calendar-next-month.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "21-calendar-no-leave-day",
+      "label": "December calendar after empty-day click; no new panel",
+      "screenshot": "screenshots/21-calendar-no-leave-day.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1346,
+      "url": "https://mobiyantraworkportal.co.in/calendar",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/21-calendar-no-leave-day.txt",
+      "control_metadata": "evidence/21-calendar-no-leave-day.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "22-directory-dark",
+      "label": "22 directory dark",
+      "screenshot": "screenshots/22-directory-dark.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 2339,
+      "url": "https://mobiyantraworkportal.co.in/employees",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/22-directory-dark.txt",
+      "control_metadata": "evidence/22-directory-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "23-directory-department-filter",
+      "label": "23 directory department filter",
+      "screenshot": "screenshots/23-directory-department-filter.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 784,
+      "url": "https://mobiyantraworkportal.co.in/employees",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/23-directory-department-filter.txt",
+      "control_metadata": "evidence/23-directory-department-filter.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "24-directory-employee-details",
+      "label": "Employee-name click; no details opened",
+      "screenshot": "screenshots/24-directory-employee-details.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 784,
+      "url": "https://mobiyantraworkportal.co.in/employees",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/24-directory-employee-details.txt",
+      "control_metadata": "evidence/24-directory-employee-details.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "25-directory-no-results",
+      "label": "25 directory no results",
+      "screenshot": "screenshots/25-directory-no-results.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 678,
+      "url": "https://mobiyantraworkportal.co.in/employees",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 458,
+        "width": 458
+      },
+      "text_evidence": "evidence/25-directory-no-results.txt",
+      "control_metadata": "evidence/25-directory-no-results.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "26-profile-dark",
+      "label": "26 profile dark",
+      "screenshot": "screenshots/26-profile-dark.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1108,
+      "url": "https://mobiyantraworkportal.co.in/profile",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/26-profile-dark.txt",
+      "control_metadata": "evidence/26-profile-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "27-profile-edit-dark",
+      "label": "27 profile edit dark",
+      "screenshot": "screenshots/27-profile-edit-dark.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 890,
+      "url": "https://mobiyantraworkportal.co.in/profile",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/27-profile-edit-dark.txt",
+      "control_metadata": "evidence/27-profile-edit-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "28-login-detailed",
+      "label": "28 login detailed",
+      "screenshot": "screenshots/28-login-detailed.jpg",
+      "screenshot_width": 1280,
+      "screenshot_height": 720,
+      "url": "https://mobiyantraworkportal.co.in/auth",
+      "viewport": {
+        "height": 720,
+        "scrollWidth": 1280,
+        "width": 1280
+      },
+      "text_evidence": "evidence/28-login-detailed.txt",
+      "control_metadata": "evidence/28-login-detailed.json",
+      "theme_action_title": null
+    },
+    {
+      "id": "29-forgot-password",
+      "label": "29 forgot password",
+      "screenshot": "screenshots/29-forgot-password.jpg",
+      "screenshot_width": 1280,
+      "screenshot_height": 720,
+      "url": "https://mobiyantraworkportal.co.in/auth",
+      "viewport": {
+        "height": 720,
+        "scrollWidth": 1280,
+        "width": 1280
+      },
+      "text_evidence": "evidence/29-forgot-password.txt",
+      "control_metadata": "evidence/29-forgot-password.json",
+      "theme_action_title": null
+    },
+    {
+      "id": "30-signup-detailed",
+      "label": "30 signup detailed",
+      "screenshot": "screenshots/30-signup-detailed.jpg",
+      "screenshot_width": 1264,
+      "screenshot_height": 1065,
+      "url": "https://mobiyantraworkportal.co.in/auth",
+      "viewport": {
+        "height": 720,
+        "scrollWidth": 1265,
+        "width": 1280
+      },
+      "text_evidence": "evidence/30-signup-detailed.txt",
+      "control_metadata": "evidence/30-signup-detailed.json",
+      "theme_action_title": null
+    },
+    {
+      "id": "31-signup-company-options",
+      "label": "31 signup company options",
+      "screenshot": "screenshots/31-signup-company-options.jpg",
+      "screenshot_width": 1280,
+      "screenshot_height": 1065,
+      "url": "https://mobiyantraworkportal.co.in/auth",
+      "viewport": {
+        "height": 720,
+        "scrollWidth": 1280,
+        "width": 1280
+      },
+      "text_evidence": "evidence/31-signup-company-options.txt",
+      "control_metadata": "evidence/31-signup-company-options.json",
+      "theme_action_title": null
+    },
+    {
+      "id": "32-signup-department-options",
+      "label": "32 signup department options",
+      "screenshot": "screenshots/32-signup-department-options.jpg",
+      "screenshot_width": 1280,
+      "screenshot_height": 1065,
+      "url": "https://mobiyantraworkportal.co.in/auth",
+      "viewport": {
+        "height": 720,
+        "scrollWidth": 1280,
+        "width": 1280
+      },
+      "text_evidence": "evidence/32-signup-department-options.txt",
+      "control_metadata": "evidence/32-signup-department-options.json",
+      "theme_action_title": null
+    },
+    {
+      "id": "33-signup-designation-options",
+      "label": "33 signup designation options",
+      "screenshot": "screenshots/33-signup-designation-options.jpg",
+      "screenshot_width": 1280,
+      "screenshot_height": 1065,
+      "url": "https://mobiyantraworkportal.co.in/auth",
+      "viewport": {
+        "height": 720,
+        "scrollWidth": 1280,
+        "width": 1280
+      },
+      "text_evidence": "evidence/33-signup-designation-options.txt",
+      "control_metadata": "evidence/33-signup-designation-options.json",
+      "theme_action_title": null
+    },
+    {
+      "id": "34-signup-gender-options",
+      "label": "34 signup gender options",
+      "screenshot": "screenshots/34-signup-gender-options.jpg",
+      "screenshot_width": 1280,
+      "screenshot_height": 1065,
+      "url": "https://mobiyantraworkportal.co.in/auth",
+      "viewport": {
+        "height": 720,
+        "scrollWidth": 1280,
+        "width": 1280
+      },
+      "text_evidence": "evidence/34-signup-gender-options.txt",
+      "control_metadata": "evidence/34-signup-gender-options.json",
+      "theme_action_title": null
+    },
+    {
+      "id": "35-signup-role-options",
+      "label": "35 signup role options",
+      "screenshot": "screenshots/35-signup-role-options.jpg",
+      "screenshot_width": 1280,
+      "screenshot_height": 1065,
+      "url": "https://mobiyantraworkportal.co.in/auth",
+      "viewport": {
+        "height": 720,
+        "scrollWidth": 1280,
+        "width": 1280
+      },
+      "text_evidence": "evidence/35-signup-role-options.txt",
+      "control_metadata": "evidence/35-signup-role-options.json",
+      "theme_action_title": null
+    },
+    {
+      "id": "36-balance-dark",
+      "label": "36 balance dark",
+      "screenshot": "screenshots/36-balance-dark.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1064,
+      "url": "https://mobiyantraworkportal.co.in/balance",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/36-balance-dark.txt",
+      "control_metadata": "evidence/36-balance-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "37-payslips-dark",
+      "label": "37 payslips dark",
+      "screenshot": "screenshots/37-payslips-dark.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 678,
+      "url": "https://mobiyantraworkportal.co.in/payslips",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 458,
+        "width": 458
+      },
+      "text_evidence": "evidence/37-payslips-dark.txt",
+      "control_metadata": "evidence/37-payslips-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "38-assets-dark",
+      "label": "38 assets dark",
+      "screenshot": "screenshots/38-assets-dark.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 678,
+      "url": "https://mobiyantraworkportal.co.in/my-assets",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 458,
+        "width": 458
+      },
+      "text_evidence": "evidence/38-assets-dark.txt",
+      "control_metadata": "evidence/38-assets-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "39-reports-dark",
+      "label": "39 reports dark",
+      "screenshot": "screenshots/39-reports-dark.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1317,
+      "url": "https://mobiyantraworkportal.co.in/reports",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/39-reports-dark.txt",
+      "control_metadata": "evidence/39-reports-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "40-holidays-dark",
+      "label": "40 holidays dark",
+      "screenshot": "screenshots/40-holidays-dark.jpg",
+      "screenshot_width": 274,
+      "screenshot_height": 656,
+      "url": "https://mobiyantraworkportal.co.in/holidays",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/40-holidays-dark.txt",
+      "control_metadata": "evidence/40-holidays-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "41-guide-dark-complete",
+      "label": "Complete workflow guide (light theme)",
+      "screenshot": "screenshots/41-guide-dark-complete.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 6544,
+      "url": "https://mobiyantraworkportal.co.in/how-it-works",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/41-guide-dark-complete.txt",
+      "control_metadata": "evidence/41-guide-dark-complete.json",
+      "theme_action_title": "Switch to dark mode"
+    },
+    {
+      "id": "42-mobile-navigation",
+      "label": "42 mobile navigation",
+      "screenshot": "screenshots/42-mobile-navigation.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 1317,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 458,
+        "width": 458
+      },
+      "text_evidence": "evidence/42-mobile-navigation.txt",
+      "control_metadata": "evidence/42-mobile-navigation.json",
+      "theme_action_title": "Switch to dark mode"
+    },
+    {
+      "id": "43-account-menu",
+      "label": "43 account menu",
+      "screenshot": "screenshots/43-account-menu.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 1317,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 458,
+        "width": 458
+      },
+      "text_evidence": "evidence/43-account-menu.txt",
+      "control_metadata": "evidence/43-account-menu.json",
+      "theme_action_title": "Switch to dark mode"
+    },
+    {
+      "id": "44-desktop-dark-dashboard",
+      "label": "44 desktop dark dashboard",
+      "screenshot": "screenshots/44-desktop-dark-dashboard.jpg",
+      "screenshot_width": 1440,
+      "screenshot_height": 1000,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": {
+        "height": 1000,
+        "scrollWidth": 1440,
+        "width": 1440
+      },
+      "text_evidence": "evidence/44-desktop-dark-dashboard.txt",
+      "control_metadata": "evidence/44-desktop-dark-dashboard.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "45-attendance-desktop-dark",
+      "label": "45 attendance desktop dark",
+      "screenshot": "screenshots/45-attendance-desktop-dark.jpg",
+      "screenshot_width": 1440,
+      "screenshot_height": 1000,
+      "url": "https://mobiyantraworkportal.co.in/attendance",
+      "viewport": {
+        "height": 1000,
+        "scrollWidth": 1440,
+        "width": 1440
+      },
+      "text_evidence": "evidence/45-attendance-desktop-dark.txt",
+      "control_metadata": "evidence/45-attendance-desktop-dark.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "46-correction-prefilled",
+      "label": "46 correction prefilled",
+      "screenshot": "screenshots/46-correction-prefilled.jpg",
+      "screenshot_width": 1440,
+      "screenshot_height": 1000,
+      "url": "https://mobiyantraworkportal.co.in/attendance",
+      "viewport": {
+        "height": 1000,
+        "scrollWidth": 1440,
+        "width": 1440
+      },
+      "text_evidence": "evidence/46-correction-prefilled.txt",
+      "control_metadata": "evidence/46-correction-prefilled.json",
+      "theme_action_title": "Switch to light mode"
+    },
+    {
+      "id": "47-final-dashboard-light",
+      "label": "47 final dashboard light",
+      "screenshot": "screenshots/47-final-dashboard-light.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1317,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": {
+        "height": 678,
+        "scrollWidth": 443,
+        "width": 458
+      },
+      "text_evidence": "evidence/47-final-dashboard-light.txt",
+      "control_metadata": "evidence/47-final-dashboard-light.json",
+      "theme_action_title": "Switch to dark mode"
+    },
+    {
+      "id": "48-notifications-panel-live",
+      "label": "Live notification panel and full accessibility text",
+      "screenshot": "screenshots/48-notifications-panel-live.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 656,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": null,
+      "text_evidence": "evidence/48-notifications-panel-live.txt",
+      "control_metadata": null,
+      "theme_action_title": null
+    },
+    {
+      "id": "49-notification-item-click",
+      "label": "Notification-item click; no navigation established",
+      "screenshot": "screenshots/49-notification-item-click.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 656,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": null,
+      "text_evidence": "evidence/49-notification-item-click.txt",
+      "control_metadata": null,
+      "theme_action_title": null
+    },
+    {
+      "id": "50-notifications-history-scroll",
+      "label": "Scrolled notification history",
+      "screenshot": "screenshots/50-notifications-history-scroll.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 656,
+      "url": "https://mobiyantraworkportal.co.in/dashboard",
+      "viewport": null,
+      "text_evidence": null,
+      "control_metadata": null,
+      "theme_action_title": null
+    }
+  ],
+  "initial_captures": [
+    {
+      "id": "01-login-desktop",
+      "screenshot": "initial-reference/01-login-desktop.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 678
+    },
+    {
+      "id": "02-signup-desktop",
+      "screenshot": "initial-reference/02-signup-desktop.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1267
+    },
+    {
+      "id": "03-dashboard-desktop",
+      "screenshot": "initial-reference/03-dashboard-desktop.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1317
+    },
+    {
+      "id": "04-navigation",
+      "screenshot": "initial-reference/04-navigation.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 1317
+    },
+    {
+      "id": "05-apply-leave",
+      "screenshot": "initial-reference/05-apply-leave.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1260
+    },
+    {
+      "id": "06-my-requests",
+      "screenshot": "initial-reference/06-my-requests.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1045
+    },
+    {
+      "id": "07-leave-balance",
+      "screenshot": "initial-reference/07-leave-balance.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1064
+    },
+    {
+      "id": "08-payslips",
+      "screenshot": "initial-reference/08-payslips.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 678
+    },
+    {
+      "id": "09-attendance",
+      "screenshot": "initial-reference/09-attendance.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 2279
+    },
+    {
+      "id": "10-attendance-correction",
+      "screenshot": "initial-reference/10-attendance-correction.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 2279
+    },
+    {
+      "id": "11-team-calendar",
+      "screenshot": "initial-reference/11-team-calendar.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1357
+    },
+    {
+      "id": "12-employees",
+      "screenshot": "initial-reference/12-employees.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 2339
+    },
+    {
+      "id": "13-holidays",
+      "screenshot": "initial-reference/13-holidays.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1973
+    },
+    {
+      "id": "14-my-assets",
+      "screenshot": "initial-reference/14-my-assets.jpg",
+      "screenshot_width": 458,
+      "screenshot_height": 678
+    },
+    {
+      "id": "15-reports",
+      "screenshot": "initial-reference/15-reports.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1317
+    },
+    {
+      "id": "16-how-it-works",
+      "screenshot": "initial-reference/16-how-it-works.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 6544
+    },
+    {
+      "id": "17-notifications",
+      "screenshot": "initial-reference/17-notifications.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1317
+    },
+    {
+      "id": "18-profile",
+      "screenshot": "initial-reference/18-profile.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1108
+    },
+    {
+      "id": "19-profile-edit",
+      "screenshot": "initial-reference/19-profile-edit.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 890
+    },
+    {
+      "id": "20-dashboard-1440",
+      "screenshot": "initial-reference/20-dashboard-1440.jpg",
+      "screenshot_width": 1440,
+      "screenshot_height": 1000
+    },
+    {
+      "id": "21-apply-leave-1440",
+      "screenshot": "initial-reference/21-apply-leave-1440.jpg",
+      "screenshot_width": 1440,
+      "screenshot_height": 1000
+    },
+    {
+      "id": "22-apply-leave-390",
+      "screenshot": "initial-reference/22-apply-leave-390.jpg",
+      "screenshot_width": 375,
+      "screenshot_height": 1260
+    },
+    {
+      "id": "23-dashboard-390",
+      "screenshot": "initial-reference/23-dashboard-390.jpg",
+      "screenshot_width": 375,
+      "screenshot_height": 1317
+    },
+    {
+      "id": "24-dashboard-768",
+      "screenshot": "initial-reference/24-dashboard-768.jpg",
+      "screenshot_width": 752,
+      "screenshot_height": 1361
+    },
+    {
+      "id": "25-request-filters",
+      "screenshot": "initial-reference/25-request-filters.jpg",
+      "screenshot_width": 443,
+      "screenshot_height": 1294
+    }
+  ]
+}

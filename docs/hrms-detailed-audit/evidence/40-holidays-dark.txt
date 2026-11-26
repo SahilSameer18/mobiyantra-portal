@@ -1,0 +1,89 @@
+- banner:
+  - button:
+  - heading "National Holidays" [level=1]
+  - button "Punch In":
+    - text: Punch In
+  - button "Switch to light mode":
+  - button:
+- main:
+  - heading "National Holiday Calendar" [level=1]
+  - paragraph: India Public & Gazetted Holidays
+  - paragraph: January 2026
+  - generic: Republic Day
+  - generic: Office Closed
+  - generic: National
+  - generic: January 26
+  - paragraph: March 2026
+  - generic: Holi
+  - generic: Festival
+  - generic: March 4
+  - generic: Id-ul-Fitr
+  - generic: Festival
+  - generic: March 21
+  - generic: Ram Navami
+  - generic: Festival
+  - generic: March 26
+  - generic: Mahavir Jayanti
+  - generic: Festival
+  - generic: March 31
+  - paragraph: April 2026
+  - generic: Good Friday
+  - generic: Festival
+  - generic: April 3
+  - paragraph: May 2026
+  - generic: Buddha Purnima
+  - generic: Festival
+  - generic: May 1
+  - generic: Id-ul-Zuha (Bakrid)
+  - generic: Festival
+  - generic: May 27
+  - paragraph: June 2026
+  - generic: Muharram
+  - generic: Festival
+  - generic: June 26
+  - paragraph: August 2026
+  - generic: Independence Day
+  - generic: Office Closed
+  - generic: National
+  - generic: August 15
+  - generic: Milad-un-Nabi (Id-e-Milad)
+  - generic: Festival
+  - generic: August 26
+  - paragraph: September 2026
+  - generic: Janmashtami
+  - generic: Festival
+  - generic: September 4
+  - paragraph: October 2026
+  - generic: Mahatma Gandhi's Birthday
+  - generic: Office Closed
+  - generic: National
+  - generic: October 2
+  - generic: Dussehra
+  - generic: Office Closed
+  - generic: Festival
+  - generic: October 20
+  - paragraph: November 2026
+  - generic: Diwali
+  - generic: Office Closed
+  - generic: Festival
+  - generic: November 8
+  - generic: Diwali Holiday
+  - generic: Office Closed
+  - generic: Festival
+  - generic: November 9
+  - generic: Diwali Holiday
+  - generic: Office Closed
+  - generic: Festival
+  - generic: November 10
+  - generic: Diwali Holiday
+  - generic: Office Closed
+  - generic: Festival
+  - generic: November 11
+  - generic: Guru Nanak's Birthday
+  - generic: Festival
+  - generic: November 24
+  - paragraph: December 2026
+  - generic: Christmas Day
+  - generic: Festival
+  - generic: December 25
+- region "Notifications alt+T"

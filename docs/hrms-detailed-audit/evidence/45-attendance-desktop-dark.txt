@@ -1,0 +1,259 @@
+- complementary:
+  - img "Mobiyantra"
+  - paragraph: Work Portal
+  - navigation:
+    - paragraph: Navigation
+    - link "Dashboard":
+      - /url: /dashboard
+      - generic: Dashboard
+    - link "Apply Leave":
+      - /url: /apply-leave
+      - generic: Apply Leave
+    - link "My Requests":
+      - /url: /my-requests
+      - generic: My Requests
+    - link "Leave Balance":
+      - /url: /balance
+      - generic: Leave Balance
+    - link "Payslips":
+      - /url: /payslips
+      - generic: Payslips
+    - link "Attendance":
+      - /url: /attendance
+      - generic: Attendance
+    - link "Team Calendar":
+      - /url: /calendar
+      - generic: Team Calendar
+    - link "Employees":
+      - /url: /employees
+      - generic: Employees
+    - link "Holidays":
+      - /url: /holidays
+      - generic: Holidays
+    - link "My Assets":
+      - /url: /my-assets
+      - generic: My Assets
+    - link "Reports":
+      - /url: /reports
+      - generic: Reports
+  - link "How It Works":
+    - /url: /how-it-works
+    - generic: How It Works
+  - button "Sahil Sameer Siddique Sahil Sameer Siddique sahilsameerdev18@gmail.com":
+    - img "Sahil Sameer Siddique"
+    - paragraph: Sahil Sameer Siddique
+    - paragraph: sahilsameerdev18@gmail.com
+- banner:
+  - heading "Attendance" [level=1]
+  - paragraph: Leave Management System
+  - button "Punch In":
+    - text: Punch In
+  - button "Switch to light mode":
+  - button:
+- main:
+  - heading "Attendance" [level=1]
+  - paragraph: Track your daily punch in / punch out
+  - paragraph: Wednesday, November 25, 2026
+  - heading "Session Complete" [level=2]
+  - paragraph:
+    - text: Punch In
+  - paragraph: 10:08 AM
+  - paragraph:
+    - text: Punch Out
+  - paragraph: 06:43 PM
+  - paragraph: Total Hours This Session
+  - paragraph: 8.59 hrs
+  - button "Punch In":
+    - generic: Punch In
+  - generic: "18"
+  - generic: Present Days
+  - generic: Last 30 days
+  - generic: "0"
+  - generic: Work From Home
+  - generic: Last 30 days
+  - generic: "0"
+  - generic: Half Days
+  - generic: Last 30 days
+  - generic: 7.2h
+  - generic: Avg. Hours/Day
+  - generic: Last 30 days
+  - heading "Attendance History" [level=2]
+  - button "Refresh":
+  - combobox:
+    - option "November 2026" [selected]
+    - option "October 2026"
+    - option "September 2026"
+    - option "August 2026"
+    - option "July 2026"
+    - option "June 2026"
+    - option "May 2026"
+    - option "April 2026"
+    - option "March 2026"
+    - option "February 2026"
+    - option "January 2026"
+    - option "December 2025"
+  - paragraph: Wed, Nov 25
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:08 AM
+  - paragraph: Out
+  - paragraph: 06:43 PM
+  - paragraph: Hrs
+  - paragraph: 8.6h
+  - button "Request correction":
+  - paragraph: Tue, Nov 24
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:55 AM
+  - paragraph: Out
+  - paragraph: 06:45 PM
+  - paragraph: Hrs
+  - paragraph: 8.8h
+  - button "Request correction":
+  - paragraph: Mon, Nov 23
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:56 AM
+  - paragraph: Out
+  - paragraph: 06:14 PM
+  - paragraph: Hrs
+  - paragraph: 8.3h
+  - button "Request correction":
+  - paragraph: Fri, Nov 20
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:55 AM
+  - paragraph: Out
+  - paragraph: 06:42 PM
+  - paragraph: Hrs
+  - paragraph: 8.8h
+  - button "Request correction":
+  - paragraph: Thu, Nov 19
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:57 AM
+  - paragraph: Out
+  - paragraph: 08:46 PM
+  - paragraph: Hrs
+  - paragraph: 10.8h
+  - button "Request correction":
+  - paragraph: Wed, Nov 18
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:59 AM
+  - paragraph: Out
+  - paragraph: 06:10 PM
+  - paragraph: Hrs
+  - paragraph: 8.2h
+  - button "Request correction":
+  - paragraph: Tue, Nov 17
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:51 AM
+  - paragraph: Out
+  - paragraph: 06:24 PM
+  - paragraph: Hrs
+  - paragraph: 8.6h
+  - button "Request correction":
+  - paragraph: Mon, Nov 16
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:00 AM
+  - paragraph: Out
+  - paragraph: 06:30 PM
+  - paragraph: Hrs
+  - paragraph: 8.5h
+  - button "Request correction":
+  - paragraph: Fri, Nov 13
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:03 AM
+  - paragraph: Out
+  - paragraph: 06:10 PM
+  - paragraph: Hrs
+  - paragraph: 8.1h
+  - button "Request correction":
+  - paragraph: Thu, Nov 12
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 10:09 AM
+  - paragraph: Out
+  - paragraph: 06:12 PM
+  - paragraph: Hrs
+  - paragraph: 8.1h
+  - button "Request correction":
+  - paragraph: Wed, Nov 11
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: —
+  - paragraph: Out
+  - paragraph: —
+  - paragraph: Hrs
+  - paragraph: —
+  - button "Request correction":
+  - paragraph: Tue, Nov 10
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: —
+  - paragraph: Out
+  - paragraph: —
+  - paragraph: Hrs
+  - paragraph: —
+  - button "Request correction":
+  - paragraph: Mon, Nov 9
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: —
+  - paragraph: Out
+  - paragraph: —
+  - paragraph: Hrs
+  - paragraph: —
+  - button "Request correction":
+  - paragraph: Fri, Nov 6
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:59 AM
+  - paragraph: Out
+  - paragraph: 06:59 PM
+  - paragraph: Hrs
+  - paragraph: 9.0h
+  - button "Request correction":
+  - paragraph: Thu, Nov 5
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:55 AM
+  - paragraph: Out
+  - paragraph: 06:22 PM
+  - paragraph: Hrs
+  - paragraph: 8.4h
+  - button "Request correction":
+  - paragraph: Wed, Nov 4
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:52 AM
+  - paragraph: Out
+  - paragraph: 06:06 PM
+  - paragraph: Hrs
+  - paragraph: 8.2h
+  - button "Request correction":
+  - paragraph: Tue, Nov 3
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:57 AM
+  - paragraph: Out
+  - paragraph: 06:18 PM
+  - paragraph: Hrs
+  - paragraph: 8.3h
+  - button "Request correction":
+  - paragraph: Mon, Nov 2
+  - paragraph: Full Day
+  - paragraph: In
+  - paragraph: 09:51 AM
+  - paragraph: Out
+  - paragraph: 06:10 PM
+  - paragraph: Hrs
+  - paragraph: 8.3h
+  - button "Request correction":
+  - heading "My Correction Requests" [level=2]
+  - paragraph: No correction requests yet
+- region "Notifications alt+T"
