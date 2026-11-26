@@ -1,9 +1,0 @@
-HRMS authentication reference
-
-Responsive requirement: new system must support mobile, tablet, and desktop. Current captures show the existing desktop interface.
-
-Login: email, password, Forgot password link, Login action, Sign Up tab.
-
-Sign Up: full name, email, date of birth, join date, company, department, designation, phone number, gender (marked required), role (defaults to Employee), password, confirm password.
-
-Observed only: field validation, registration permissions, dropdown dependencies, password recovery and post-submission behavior still need verification. No forms submitted.
